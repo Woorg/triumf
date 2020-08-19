@@ -1,0 +1,74 @@
+.nav
+    font-family: $o
+    &__list
+        justify-content: flex-start
+
+    &__item
+        margin-right: 70px
+        &:last-child
+            margin-right: 0
+
+    &__link
+        padding-top: 28px
+        display: block
+        color: $white
+        font-size: 14px
+        text-decoration: none
+        +tr(.3s ease)
+
+        &:hover
+            color: darken($white , 03)
+            +tr(.3s ease)
+
+.nav_active
+    background: $white
+    width: 100%
+    display: block
+    +mq($medium)
+        display: flex
+        background: transparent
+        width: auto
+    .nav__list
+        padding-right: 15px
+        padding-bottom: 15px
+        padding-left: 15px
+        flex-wrap: wrap
+        display: block
+        +mq($medium)
+            padding-right: 0
+            padding-left: 0
+            display: flex
+            flex-wrap: nowrap
+
+    .nav__item
+        margin-right: 0
+        +mq($medium)
+            margin-right: 70px
+
+    .nav__link
+        color: $black
+        +mq($medium)
+            color: $white
+
+
+
+
+.nav_secondary
+    .nav__list
+        flex-wrap: wrap
+        +mq($large)
+            flex-wrap: nowrap
+    .nav__item
+        margin-right: 0
+        margin-bottom: 20px
+        max-width: 50%
+        flex-basis: 50%
+        +mq($large)
+            margin-right: 40px
+            margin-bottom: 0px
+            max-width: 100%
+            flex-basis: 100%
+    .nav__link
+        padding-top: 0
+        font-weight: 600
+        white-space: nowrap

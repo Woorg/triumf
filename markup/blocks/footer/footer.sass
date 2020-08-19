@@ -1,0 +1,78 @@
+.footer
+    background-color: #064b5e
+    // &__container
+
+    &__top
+        padding-top: 16px
+        padding-bottom: 16px
+        align-items: center
+        flex-wrap: wrap
+        +mq($large)
+            flex-wrap: nowrap
+    &__logo
+        order: 0
+        +mq($large)
+            order: 0
+
+    &__nav
+        margin-top: 33px
+        order: 3
+        width: 100%
+        +mq($large)
+            margin-top: 0
+            margin-left: 70px
+            width: auto
+            order: 2
+
+
+
+    &__contacts
+        // max-width: 100px
+        margin-left: auto
+        order: 1
+        text-align: right
+        +mq($large)
+            order: 2
+
+    &__phone
+        color: $white
+
+    &__email
+        margin-top: 10px
+        display: block
+        color: $white
+        font-size: 14px
+        font-weight: bold
+        text-decoration: none
+        +tr(.3s ease)
+        &:hover
+            color: darken($white, 03)
+            +tr(.3s ease)
+
+    &__bottom
+        border-top: solid 1px #2f7589
+        padding-top: 11px
+        padding-bottom: 11px
+        font-size: 12px
+
+    &__copyright
+        color: $white
+        line-height: 1.4
+        +mq($large)
+            line-height: 1
+
+    &__created
+        margin-left: auto
+        color: $white
+        line-height: 1.4
+        text-align: right
+        +mq($large)
+            line-height: 1
+
+    &__created-link
+        margin-left: 5px
+        color: $white
+        &:hover
+            text-decoration: none
+
+

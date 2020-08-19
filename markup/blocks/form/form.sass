@@ -1,0 +1,597 @@
+
+.form
+  display: flex
+  flex-direction: column
+
+  &__row
+    margin-bottom: 33px
+    display: flex
+    flex-wrap: wrap
+    +r($medium)
+      margin-bottom: (33px / 2)
+
+    &:last-child,
+    &:only-child
+      margin-bottom: 0
+
+
+  &__row_map
+    margin-bottom: 21px
+    align-items: flex-end
+    .form__label
+      .form__label-text
+        margin-right: 20px
+        max-width: 149px
+
+    &:last-child
+      margin-top: -20px
+      margin-bottom: 0
+      align-items: center
+
+    .form__input
+      +r($medium)
+        max-width: 266px
+
+
+  &__field
+    margin-bottom: 18px
+    width: 100%
+    display: flex
+    flex-grow: 1
+    +r($small)
+      margin-bottom: 16px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__field_settings
+    margin-bottom: 15px
+
+  &__field_coords
+    .form__input
+      padding-top: 12px
+      padding-right: 14px
+      padding-bottom: 12px
+      padding-left: 14px
+      max-width: 153px
+      height: 44px
+      font-family: $f
+      +r($medium)
+        max-width: 137px
+  &__field-sep
+    margin-right: 5px
+    margin-left: 5px
+
+  &__field_radio
+    position: relative
+    margin-bottom: 0
+    padding-right: 10px
+    &:last-child
+      padding-right: 0
+      padding-left: 10px
+      +r($small)
+        padding-left: 15px
+      &::after
+        position: absolute
+        top: 50%
+        left: 0
+        content: ''
+        width: 1px
+        height: 23px
+        background-color: #4d6bef
+        transform: translateY(-50%)
+        +r($small)
+          height: 30px
+
+    .form__label
+      font-family: $f
+      align-items: center
+    .form__radio
+      top: 0
+      order: 1
+    .form__label-text
+      margin-right: 7px
+      font-size: 14px
+      font-family: $f
+      line-height: 1.42
+      +r($small)
+        margin-right: 12px
+        font-size: 17px
+
+
+  &__field_privacy
+    +r($small)
+      // margin-top: 44px
+      margin-top: 26px
+
+    .form__label
+      align-items: center
+      cursor: pointer
+      text-align: left
+
+    .form__label-text
+      margin-left: 11px
+      color: #ffffff
+      +r($small)
+        margin-left: 6px
+
+    .form__label-link
+      // padding-bottom: 3px
+      display: inline-block
+      color: inherit
+      font-family: $fL
+      line-height: 1.4
+      // box-shadow: inset 0 -1px 0 #fff
+      +tr(all .3s linear)
+      +r($small)
+        padding-right: 4px
+        padding-left: 4px
+      &:hover
+        text-decoration: none
+        // box-shadow: none
+        +tr(all .3s linear)
+
+
+  &__field_file
+    position: relative
+    margin-bottom: 10px
+    align-items: center
+    +r($medium)
+      justify-content: center
+      flex-wrap: wrap
+
+    +r($small)
+      justify-content: flex-start
+
+    &:hover
+      .form__file-button
+        border: 1px solid darken(#ffffff, 10)
+        cursor: pointer
+        +tr(all .3s ease)
+
+  &__field_file_name
+    margin-bottom: 13px
+    +r($small)
+      margin-bottom: 3px
+    .form__file-button
+      margin-right: 0
+      padding-right: 18px
+      padding-left: 8px
+      +r($medium)
+        padding-right: 11px
+        flex-grow: 1
+    .form__file-name
+      +r($medium)
+        padding-right: 15px
+        padding-left: 24px
+        max-width: 158px
+        max-width: 163px
+
+    .form__file-remove
+      margin-left: 15px
+      +r($medium)
+        margin-left: 11px
+      +r($small)
+        margin-left: 0
+
+  &__field_file_title
+
+    .form__file-button
+      margin-right: 16px
+      padding-right: 15px
+      +r($medium)
+        order: 0
+    .form__file-title
+      +r($medium)
+        margin-left: 0
+        order: 1
+    .form__file-remove
+      +r($medium)
+        order: 2
+
+
+  &__field_link
+    margin-bottom: 13px
+    +r($small)
+      margin-bottom: 0
+      flex-wrap: wrap
+
+    .form__input
+      max-width: 312px
+      height: 42px
+      flex-grow: 1
+      flex-shrink: 0
+      color: #161b30
+      font-family: $f
+      font-weight: 500
+      +r($medium)
+        padding-right: 10px
+        padding-left: 10px
+        font-size: 16px
+
+    .form__input-remove
+      margin-left: 17px
+      +r($medium)
+        padding-top: 12px
+        padding-bottom: 13px
+      +r($small)
+        margin-left: 0
+
+
+
+
+
+
+  &__caption
+    margin-right: 11px
+    padding-top: 7px
+    padding-left: 13px
+    padding-right: 32px
+    padding-bottom: 8px
+    height: 32px
+    flex-grow: 1
+    background-color: #161b30
+    font-size: 14px
+    line-height: 1.42
+    text-align: left
+    border-radius: 5px
+    +r($small)
+      padding-top: 6px
+      padding-right: 40px
+      padding-bottom: 8px
+      height: auto
+      flex-grow: 0
+      font-size: 17px
+
+  &__label
+    position: relative
+    flex-grow: 1
+
+  &__label-text
+    color: #ffffff
+    font-family: $fL
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.14
+    +r($small)
+      font-size: 12px
+      line-height: 1.17
+
+  &__label_settings
+    align-items: center
+    +r($medium)
+      flex-wrap: wrap
+
+    .form__label-text
+      max-width: 123px
+      width: 100%
+      font-family: $f
+      font-size: 20px
+      white-space: nowrap
+      +r($medium)
+        margin-bottom: 13px
+
+  &__input
+    +resetbutton()
+    padding-right: 20px
+    padding-left: 20px
+    width: 100%
+    height: 54px
+    background-color: #ffffff
+    font-family: $fL
+    font-size: 16px
+    font-weight: 300
+    line-height: 1
+    text-align: left
+    color: #161b30
+    border-radius: 5px
+    +placeholder()
+      color: #161b30
+
+    +r($medium)
+      height: 46px
+    +r($small)
+      font-size: 14px
+
+  &__input_settings
+    padding-right: 21px
+    padding-left: 21px
+    // max-width: 268px
+    max-width: 313px
+    height: 42px
+    // flex-shrink: 1
+    flex-grow: 1
+    color: #161b30
+    font-weight: 500
+    font-size: 16px
+    font-family: $f
+
+  &__input-remove
+    position: relative
+    z-index: 2
+    align-items: center
+    white-space: nowrap
+    color: inherit
+    font-family: $fL
+    font-size: 14px
+    line-height: 1.142
+    text-decoration: none
+    +tr(ease .3s)
+
+    &:hover
+      color: darken($white, 05)
+      +tr(ease .3s)
+
+  &__input-cross
+    margin-right: 11px
+    color: #ffffff
+    stroke: none
+
+  &__checkbox
+    position: relative
+    top: -2px
+    border: solid 1px #ffffff
+    appearance: none
+
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+
+    background-color: transparent
+
+
+    border-radius: 3px
+    +r($small)
+      width: 18px
+      height: 18px
+
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      content: ''
+      opacity: 0
+      transform: translate(-50% , -50%)
+      +tr(opacity .1s linear)
+
+    &:checked
+      &:after
+        +bg($checked)
+        opacity: 1
+        +tr(opacity .1s linear)
+
+  &__radio
+    position: relative
+    top: -2px
+    appearance: none
+
+    width: 16px
+    height: 16px
+    flex-shrink: 0
+    background-color: #161b30
+    border-radius: 50%
+    +r($small)
+      width: 20px
+      height: 20px
+
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      content: ''
+      opacity: 0
+      transform: translate(-50% , -50%)
+      +tr(opacity .1s linear)
+
+    &:checked
+      &:after
+        width: 10px
+        height: 10px
+        background-color: #4d6bef
+        opacity: 1
+        border-radius: 50%
+        +tr(opacity .1s linear)
+
+  &__radio-w
+    max-width: 128px
+    width: 100%
+
+  &__file
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-height: 42px
+    height: 100%
+    appearance: none
+    opacity: 0
+    z-index: 1
+    cursor: pointer
+  &__file-button
+    margin-right: 25px
+    padding-top: 11px
+    padding-bottom: 11px
+    padding-right: 19px
+    padding-left: 15px
+    height: 42px
+    flex-shrink: 0
+    box-shadow: none
+    &:hover
+      box-shadow: none
+
+  &__file-name
+    position: relative
+    left: -5px
+    padding-top: 12px
+    padding-right: 20px
+    padding-bottom: 13px
+    padding-left: 20px
+    max-width: 180px
+    width: 100%
+    height: 42px
+    background-color: $white
+    color: #161b30
+    font-size: 16px
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    border-radius: 0 5px 5px 0
+
+
+  &__file-remove
+    position: relative
+    z-index: 2
+    padding-top: 12px
+    padding-bottom: 13px
+    align-items: center
+    white-space: nowrap
+    color: inherit
+    font-family: $fL
+    font-size: 14px
+    line-height: 1.142
+    text-decoration: none
+    +tr(ease .3s)
+
+    &:hover
+      color: darken($white, 05)
+      +tr(ease .3s)
+
+
+  &__file-cross
+    margin-right: 11px
+    // width: 23px
+    // height: 23px
+    color: #ffffff
+    stroke: none
+
+  &__file-title
+    position: relative
+    z-index: 1
+    margin-left: 24px
+    padding-top: 12px
+    padding-bottom: 13px
+    font-size: 16px
+
+  &__submit
+    display: block
+
+    flex-grow: 1
+    text-align: center
+
+  &__forget
+    margin-top: 0
+    margin-bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-grow: 1
+    height: 46px
+    color: #ffffff
+    font-size: 18px
+    text-decoration: none
+    text-align: center
+    border-radius: 5px
+
+    +r($medium)
+      margin-bottom: 20px
+      font-size: 16px
+
+    +r($small)
+      margin-bottom: 0
+      background-color: #364ba7
+      +tr(all .3s linear)
+
+    &:hover
+      text-decoration: underline
+      +tr(all .3s linear)
+      +r($small)
+        text-decoration: none
+        background-color: darken(#364ba7, 10)
+
+
+
+.form_theme_second
+  .form__submit
+    height: 54px
+    font-size: 18px
+    +r($medium)
+      height: 40px
+
+    +r($small)
+      border: none
+      height: 46px
+      background-color: #4d6bef
+      font-size: 16px
+
+
+    &:hover
+      +r($small)
+        background-color: darken(#4d6bef, 05)
+
+  .form__field_privacy
+    +r($small)
+      margin-top: 24px
+
+
+
+.form_auth
+  .form__field
+    margin-bottom: 6px
+    align-items: center
+    &:last-child
+      margin-bottom: 0
+
+  .form__field_radio
+    margin-bottom: 0
+
+  .form__input
+    padding-left: 11px
+    padding-right: 11px
+    height: 32px
+    border-radius: 5px
+    background-color: #161b30
+    color: #ffffff
+    font-family: $f
+    font-size: 14px
+    font-weight: 500
+    +placeholder()
+      color: #ffffff
+      font-family: $f
+      font-size: 14px
+
+    +r($small)
+      height: 40px
+
+  .form__forget
+    margin-top: 7px
+    margin-bottom: 20px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-grow: 1
+    height: initial
+    color: #ffffff
+    font-size: 14px
+    font-weight: 500
+    line-height: 20px
+    border-radius: 0
+
+    +r($small)
+      margin-top: 14px
+      margin-bottom: 26px
+      font-size: 17px
+      background: transparent
+
+    span
+      // padding-bottom: 2px
+      box-shadow: inset 0 -1px 0 $white
+      +tr(all .3s linear)
+      +r($small)
+        padding-bottom: 3px
+
+
+    &:hover
+      text-decoration: none
+      span
+        box-shadow: none
+        +tr(all .3s linear)

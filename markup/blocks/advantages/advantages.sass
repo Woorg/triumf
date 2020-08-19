@@ -1,0 +1,58 @@
+.advantages
+    &__container
+        padding-top: 30px
+        padding-bottom: 0
+        +mq($medium)
+            padding-top: 54px
+            padding-bottom: 27px
+
+    &__title
+        margin-bottom: 36px
+        text-align: center
+        +mq($medium)
+            margin-bottom: 60px
+
+    &__list
+        flex-wrap: wrap
+        justify-content: center
+        +mq($medium)
+            flex-wrap: nowrap
+    &__item
+        margin-bottom: 30px
+        max-width: 50%
+        flex-basis: 50%
+        +mq($medium)
+            margin-bottom: 0
+            max-width: 25%
+            flex-basis: 25%
+
+    &__top
+        height: 120px
+
+    &__icon
+        margin-right: auto
+        margin-left: auto
+        display: block
+        color: $blue
+
+    &__item-title
+        position: relative
+        // margin-top: 19px
+        padding-bottom: 16px
+        font-family: $p
+        font-size: 20px
+        font-weight: 500
+        line-height: 1.2
+        text-align: center
+        +mq($medium)
+            padding-bottom: 20px
+
+        &::after
+            position: absolute
+            top: 100%
+            left: 50%
+            content: ''
+            width: 30px
+            height: 2px
+            background:#399dde
+            transform: translateX(-50%)

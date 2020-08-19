@@ -1,0 +1,68 @@
+mixin contacts(data)
+    .contacts&attributes(attributes)
+        .contacts__container.container
+            h1.contacts__title.title Контакты
+            .contacts__list.flex
+                article.contacts__item
+                    h2.contacts__item-title По вопросам участия:
+                    .contacts__item-content.flex
+                        .contacts__avatar
+                            //- img.contacts__avatar-photo(src="https://i.pravatar.cc/300", alt="avatar")
+                            != pugHelpers.Icon.call(locals, {iconName: 'man-icon', className: 'contacts__avatar-icon'})
+                        .contacts__w
+                            .contacts__name Климов Дмитрий Витальевич
+                            .contacts__position Заместитель генерального директора по взаимодействию со сторонними организациями
+                            a.contacts__phone(href="tel:+74957271195p5912") + 7 (495) 727-11-95, доб. 5912
+                            a.contacts__email(href="mailto:d.klimov@avtodor-zakupki.com") d.klimov@avtodor-zakupki.com
+
+                article.contacts__item
+                    .contacts__item-content.flex
+                        .contacts__avatar
+                            //- img.contacts__avatar-photo(src="https://i.pravatar.cc/300", alt="avatar")
+                            != pugHelpers.Icon.call(locals, {iconName: 'woman-icon', className: 'contacts__avatar-icon'})
+                        .contacts__w
+                            .contacts__name Реброва Анастасия
+                            .contacts__position Начальник отдела взаимодействия со сторонними организациями
+                            a.contacts__phone(href="tel:+74957271195p5925") + 7 (495) 727 11 95, доб. 5925
+                            a.contacts__email(href="mailto:a.rebrova@avtodor-zakupki.com") a.rebrova@avtodor-zakupki.com
+
+                article.contacts__item
+                    h2.contacts__item-title По вопросам партнерства:
+                    .contacts__item-content.flex
+                        .contacts__avatar
+                            //- img.contacts__avatar-photo(src="https://i.pravatar.cc/300", alt="avatar")
+                            != pugHelpers.Icon.call(locals, {iconName: 'woman-icon', className: 'contacts__avatar-icon'})
+                        .contacts__w
+                            .contacts__name Сальниченко Лариса
+                            .contacts__position Главный специалист
+                            a.contacts__phone(href="tel:+74957271195p5915") + 7 (495) 727-11-95, доб. 5915
+                            a.contacts__email(href="mailto:l.salnichenko@avtodor-zakupki.com") l.salnichenko@avtodor-zakupki.com
+
+                article.contacts__item
+                    h2.contacts__item-title По вопросам, связанным с программой:
+                    .contacts__item-content.flex
+                        .contacts__avatar
+                            //- img.contacts__avatar-photo(src="https://i.pravatar.cc/300", alt="avatar")
+                            != pugHelpers.Icon.call(locals, {iconName: 'woman-icon', className: 'contacts__avatar-icon'})
+                        .contacts__w
+                            .contacts__name Егорова Алла
+                            .contacts__position Главный специалист
+                            a.contacts__phone(href="tel:+74957271195p5914") + 7 (495) 727-11-95, доб. 5914
+                            a.contacts__email(href="mailto:a.egorova@avtodor-zakupki.com") a.egorova@avtodor-zakupki.com
+
+                article.contacts__item
+                    h2.contacts__item-title По вопросам участия представителей коммерческих организаций:
+                    .contacts__item-content.flex
+                        .contacts__avatar
+                            //- img.contacts__avatar-photo(src="https://i.pravatar.cc/300", alt="avatar")
+                            != pugHelpers.Icon.call(locals, {iconName: 'woman-icon', className: 'contacts__avatar-icon'})
+                        .contacts__w
+                            .contacts__name Николаева Ольга
+                            .contacts__position Ведущий специалист по работе с клиентами
+                            .contacts__phones.flex
+                                a.contacts__phone(href="tel:+74957271195p5919") +7 (495) 727-11-95 (доб. 5919),
+                                a.contacts__phone(href="tel:+79263743143") +7 (926) 374-31-43
+
+                            .contacts__emails.flex
+                                a.contacts__email(href="mailto:o.nikolaeva@avtodor-zakupki.com") o.nikolaeva@avtodor-zakupki.com,
+                                a.contacts__email(href="mailto:event@avtodor-zakupki.com") event@avtodor-zakupki.com

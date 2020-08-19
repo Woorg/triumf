@@ -1,0 +1,21 @@
+mixin advantages(data)
+    section.advantages
+        .advantages__container.container
+            h2.advantages__title.title Наши преимущества
+            ul.advantages__list.flex
+                li.advantages__item
+                    .advantages__top
+                        != pugHelpers.Icon.call(locals, {iconName: 'advantages-1', className: 'advantages__icon'})
+                    .advantages__item-title Вместимость: <br/>178 человек
+                li.advantages__item
+                    .advantages__top
+                        != pugHelpers.Icon.call(locals, {iconName: 'advantages-2', className: 'advantages__icon'})
+                    .advantages__item-title 74 просторных <br/>номера
+                li.advantages__item
+                    .advantages__top
+                        != pugHelpers.Icon.call(locals, {iconName: 'advantages-3', className: 'advantages__icon'})
+                    .advantages__item-title Доступные <br/>цены
+                li.advantages__item
+                    .advantages__top
+                        != pugHelpers.Icon.call(locals, {iconName: 'advantages-4', className: 'advantages__icon'})
+                    .advantages__item-title Безопасное <br/>размещение

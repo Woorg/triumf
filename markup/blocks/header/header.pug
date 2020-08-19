@@ -1,0 +1,96 @@
+mixin header(data)
+    header.header
+        .header__top
+            .header__container.container.flex
+                button.header__trigger
+                    span.header__trigger-line
+                    span.header__trigger-line
+                    span.header__trigger-line
+
+                a.header__logo.logo(href="#")
+                    img(src="assets/images/general/logo.png", alt="Гостиница Рослеспром")
+
+                .header__langs.langs.flex
+                    a.langs__lang.langs__lang_current(href="#") ru
+                    a.langs__lang(href="#") En
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-down', className: 'langs__icon'})
+
+                .header__address.address 117405, Россия, Москва, <br/>Варшавское шоссе, д. 145 к. 8
+                    != pugHelpers.Icon.call(locals, {iconName: 'marker-icon', className: 'address__icon'})
+
+                a.header__phone.phone(href="tel:+7(495) 660-84-50") +7(495) 660-84-50
+                    != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'phone__icon'})
+                a.header__login.flex(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'header__login-icon'})
+                    | Вход
+
+        .header__body
+            .header__container.container
+
+                nav.header__nav.nav
+                    ul.nav__list.flex
+                        li.nav__item
+                            a.nav__link(href="#") Номера и цены
+                        li.nav__item
+                            a.nav__link(href="#") Услуги
+                        li.nav__item
+                            a.nav__link(href="#") Спецпредложения
+                        li.nav__item
+                            a.nav__link(href="#") Отзывы
+                        li.nav__item
+                            a.nav__link(href="#") Контакты
+
+                .header__slider
+                    .header__slider-item
+                        a.header__slider-link(href="#")
+                        .header__slider-img
+                            img.lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
+                    .header__slider-item
+                        a.header__slider-link(href="#")
+                        .header__slider-img
+                            img.lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
+                    .header__slider-item
+                        a.header__slider-link(href="#")
+                        .header__slider-img
+                            img.lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
+                    .header__slider-item
+                        a.header__slider-link(href="#")
+                        .header__slider-img
+                            img.lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
+
+
+                .header__search-room.search-room
+                    .search-room__container.container
+                        form.search-room__form.flex(action="", method="get")
+                            .search-room__result
+                                .search-room__result-title Поиск номеров
+                                .search-room__result-quant 35 вариантов
+
+                            .search-room__date.flex
+                                input.search-room__date-result(type="text" name='date' value='25 февраля - 27 февраля')
+
+                            .search-room__guests.flex
+                                != pugHelpers.Icon.call(locals, {iconName: 'person-icon', className: 'search-room__guests-icon'})
+                                select.search-room__guests-select(name="guests")
+                                    option(value="1") 1 гость
+                                    option(value="2") 2 гостя
+                                    option(value="3") 3 гостя
+                                    option(value="4") 4 гостя
+                                != pugHelpers.Icon.call(locals, {iconName: 'arrow-down', className: 'search-room__guests-arrow'})
+
+
+                            .search-room__type.flex
+                                != pugHelpers.Icon.call(locals, {iconName: 'type', className: 'search-room__type-icon'})
+                                select.search-room__type-select(name="type")
+                                    option(value="1") Стандарт с балконом
+                                    option(value="2") Стандарт одноместный
+                                    option(value="3") Эконом двухместный
+                                    option(value="4") Эконом одноместный
+                                    option(value="5") Комфорт
+                                    option(value="6") Полулюкс
+                                    option(value="7") Люкс
+                                != pugHelpers.Icon.call(locals, {iconName: 'arrow-down', className: 'search-room__type-arrow'})
+
+
+                            button.search-room__button.flex
+                                span.search-room__button-text Искать »

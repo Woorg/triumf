@@ -1,0 +1,82 @@
+.flex
+  display: flex
+.flex_start
+  justify-content: flex-start
+.flex_center
+  justify-content: center
+.flex_top
+  align-items: flex-start
+.flex_vertical
+  align-items: center
+.flex_bottom
+  align-items: flex-end
+
+.title
+  position: relative
+  padding-bottom: 16px
+  color: $black
+  font-family: $p
+  font-size: 30px
+  font-weight: 500
+  +mq($medium)
+    padding-bottom: 12px
+    font-size: 34px
+
+  &::after
+    position: absolute
+    top: 100%
+    left: 50%
+    content: ''
+    width: 63px
+    height: 2px
+    background: $blue
+    transform: translateX(-50%)
+
+
+.button
+  +resetbutton()
+  padding-top: 14px
+  padding-right: 12px
+  padding-bottom: 14px
+  padding-left: 12px
+  height: 40px
+  text-align: center
+  background-color: $blue
+  color: $white
+  font-size: 12px
+  font-weight: bold
+  line-height: 1
+  text-decoration: none
+  text-transform: uppercase
+  +tr( .3s ease)
+  &:hover
+    background-color: darken($blue, 10)
+    +tr( .3s ease)
+
+
+.wysiwyg
+  h2
+  font-size: 24px
+  line-height: 1.333
+  +mq($small)
+    font-size: 48px
+    line-height: 1.166
+
+  p
+    margin-bottom: 16px
+    font-size: 14px
+    line-height: 1.428
+    &:last-of-type
+      margin-bottom: 24px
+    +mq($small)
+      margin-bottom: 40px
+      font-size: 18px
+
+  i
+    font-size: 14px
+    line-height: 1.428
+    font-style: italic
+
+    +mq($small)
+      font-size: 24px
+      line-height: 1.333

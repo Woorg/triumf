@@ -1,0 +1,107 @@
+.offers
+    &__container
+        padding-bottom: 32px
+        font-family: $o
+        +mq($medium)
+            padding-top: 27px
+    &__title
+        margin-bottom: 35px
+        padding-bottom: 15px
+        text-align: center
+        +mq($medium)
+            margin-bottom: 41px
+    &__list
+        flex-wrap: wrap
+        overflow: hidden
+        justify-content: center
+        +mq($small)
+            margin-right: -10px
+            margin-left: -10px
+            justify-content: flex-start
+
+    &__item-w
+        margin-bottom: 20px
+        height: 344px
+        +mq($small)
+            padding-right: 10px
+            padding-left: 10px
+            max-width: 50%
+            flex-basis: 50%
+        +mq($medium)
+            padding-right: 10px
+            padding-left: 10px
+            max-width: 33.3%
+            flex-basis: 33.3%
+
+        &:last-child
+            margin-bottom: 0
+
+    &__item
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1)
+        background-color: #ffffff
+    &__image
+        position: relative
+        a
+            display: block
+            text-decoration: none
+        img
+            display: block
+            width: 100%
+    &__meta
+        position: absolute
+        bottom: 0
+        left: 0
+        padding-top: 9px
+        padding-right: 20px
+        padding-bottom: 9px
+        padding-left: 20px
+        width: 100%
+        height: 70px
+        background-color: rgba(0,0,0, .5)
+        color: $white
+
+    &__type
+        font-size: 20px
+        font-weight: 600
+        color: $white
+
+    &__meta-w
+        margin-top: 10px
+        font-weight: 400
+    &__size
+        position: relative
+        margin-right: 17px
+        padding-left: 25px
+    &__size-icon
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+    &__places
+        position: relative
+        padding-left: 26px
+    &__places-icon
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+
+    &__bottom
+        padding-top: 20px
+        padding-right: 14px
+        padding-bottom: 20px
+        padding-left: 14px
+        align-items: center
+
+    &__price
+        align-items: baseline
+        font-size: 14px
+        font-weight: bold
+        white-space: nowrap
+    &__price-val
+        margin-left: 4px
+        margin-right: 2px
+        font-size: 22px
+
+    &__order
+        margin-left: auto

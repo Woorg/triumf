@@ -1,0 +1,174 @@
+.search-room
+    &__container
+        padding-right: 0
+        padding-left: 0
+        +mq($medium)
+            padding-right: 0
+            padding-left: 0
+
+    &__form
+        display: block
+        font-family: $o
+        background-color: #ffffff
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1)
+        +mq($medium)
+            height: 70px
+            display: flex
+            flex-wrap: nowrap
+
+    &__result
+        border-bottom: solid 1px #e1e1e1
+
+        padding-top: 20px
+        padding-right: 20px
+        padding-left: 20px
+        padding-bottom: 15px
+
+        +mq($medium)
+            border-right: solid 1px #e1e1e1
+            border-bottom: none
+            max-width: 186px
+            flex-basis: 186px
+
+
+
+    &__result-title
+        margin-bottom: 3px
+        font-size: 16px
+        font-weight: 600
+        text-transform: uppercase
+
+    &__result-quant
+        color: #a1a1a1
+        font-size: 13px
+
+    &__date
+        position: relative
+        border-bottom: solid 1px #e1e1e1
+
+        padding-right: 20px
+        padding-left: 50px
+        height: 60px
+        align-items: center
+        +mq($medium)
+            border-right: solid 1px #e1e1e1
+            border-bottom: none
+            height: auto
+            max-width: 238px
+            flex-basis: 238px
+
+        &::after
+            position: absolute
+            top: 50%
+            left: 20px
+            content: ""
+            +bg($date-picker)
+            transform: translateY(-50%)
+
+    &__date-result
+        +resetbutton()
+        position: relative
+        // padding-left: 30px
+        width: 100%
+        height: 100%
+        font-size: 14px
+        +mq($medium)
+            width: 167px
+
+    &__guests
+        position: relative
+        border-bottom: solid 1px #e1e1e1
+        padding-right: 17px
+        padding-left: 24px
+        height: 60px
+        align-items: center
+        +mq($medium)
+            border-right: solid 1px #e1e1e1
+            border-bottom: none
+            max-width: 150px
+            flex-basis: 150px
+            height: auto
+
+    &__guests-icon,
+    &__type-icon
+        position: absolute
+        top: 50%
+        left: 24px
+        color: #BCBCBC
+        transform: translateY(-50%)
+
+    &__guests-select
+        +resetbutton()
+        margin-left: 27px
+        height: 100%
+        // width: 100px
+        flex-grow: 1
+        appearance: none
+        outline: none
+
+    &__guests-arrow,
+    &__type-arrow
+        flex-shrink: 0
+        color: #399dde
+
+    &__type
+        position: relative
+        // border-right: solid 1px #e1e1e1
+        padding-right: 17px
+        padding-left: 28px
+        height: 60px
+        align-items: center
+        +mq($medium)
+            max-width: 380px
+            flex-basis: 380px
+            height: auto
+
+    &__type-select
+        +resetbutton()
+        margin-left: 16px
+        height: 100%
+        flex-grow: 1
+
+        appearance: none
+        outline: none
+        +mq($medium)
+            margin-left: 28px
+
+    &__button
+        +resetbutton()
+        margin-left: auto
+        // padding-left: 35px
+        padding-top: 25px
+        padding-bottom: 25px
+        width: 100%
+        justify-content: center
+        align-items: center
+        background-color: #399dde
+        color: $white
+        font-family: $o
+        font-size: 16px
+        font-weight: 600
+        +tr(.3s ease)
+
+        +mq($medium)
+            padding-top: 0
+            padding-bottom: 0
+            width: auto
+            max-width: 163px
+            flex-basis: 163px
+
+        &:hover
+            background: darken(#399DDE, 10)
+            +tr(.3s ease)
+
+    &__button-text
+        position: relative
+        padding-left: 25px
+        text-transform: uppercase
+        &::after
+            position: absolute
+            top: 50%
+            left: 0
+            content: ''
+            +bg($search-icon)
+            transform: translateY(-50%)

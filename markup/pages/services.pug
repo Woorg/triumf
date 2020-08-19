@@ -1,0 +1,36 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../blocks/head/head.pug
+  include ../blocks/header/header.pug
+  include ../blocks/footer/footer.pug
+
+  include ../blocks/advantages/advantages.pug
+  include ../blocks/offers/offers.pug
+  include ../blocks/about/about.pug
+  include ../blocks/reviews/reviews.pug
+  include ../blocks/map/map.pug
+
+
+  head
+    +head(head.defaults)
+  body.page.lazy(data-bg='url(assets/images/general/bg.jpg)')
+    |%=symbols=%
+    .page__inner
+      +header()
+      main.main
+        +advantages()
+        +offers()
+        +about()
+        +reviews()
+        +map()
+    +footer()
+
+    script(src='%=static=%js/separate-js/lazyload.min.js' defer)
+    script(src='%=static=%js/separate-js/jquery.min.js' defer)
+    script(src='%=static=%js/separate-js/pickmeup.min.js' defer)
+
+    //- script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js' defer)
+    //- script(src='%=static=%js/separate-js/slick.min.js' defer)
+
+    script(src='%=static=%js/main%=hash=%%=min=%.js' defer)

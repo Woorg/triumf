@@ -1,0 +1,32 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "gulp-cli": "^2.2.0",
+    "jquery": "^3.5.0",
+    "pickmeup": "^3.2.1",
+    "postcss-animation": "0.0.12",
+    "postcss-fixes": "^2.0.1",
+    "postcss-flexbugs-fixes": "^4.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "rfs": "^9.0.0",
+    "scroll-tabs": "^1.0.1",
+    "svg4everybody": "^2.1.9",
+    "tiny-slider": "^2.9.3",
+    "vanilla-lazyload": "^15.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
