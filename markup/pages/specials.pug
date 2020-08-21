@@ -2,13 +2,10 @@ doctype html
 html(class="no-js", lang="ru")
 
   include ../blocks/head/head.pug
-  include ../blocks/header/header.pug
+  include ../blocks/header-inner/header-inner.pug
   include ../blocks/footer/footer.pug
 
-  include ../blocks/advantages/advantages.pug
-  include ../blocks/offers/offers.pug
-  include ../blocks/about/about.pug
-  include ../blocks/reviews/reviews.pug
+  include ../blocks/specials/specials.pug
   include ../blocks/map/map.pug
 
 
@@ -17,12 +14,9 @@ html(class="no-js", lang="ru")
   body.page.lazy(data-bg='url(assets/images/general/bg.jpg)')
     |%=symbols=%
     .page__inner
-      +header()
+      +header-inner()
       main.main
-        +advantages()
-        +offers()
-        +about()
-        +reviews()
+        +specials()
         +map()
     +footer()
 

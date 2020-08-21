@@ -88,7 +88,7 @@ import { tns } from "tiny-slider/src/tiny-slider"
         autoHeight: true,
         items: 1,
         // autoplay: true,
-        // mode: 'carousel',
+        mode: 'carousel',
         speed: 300,
         mouseDrag: true,
         nav: true,

@@ -1,0 +1,32 @@
+.header_inner
+    .header__body
+        position: relative
+
+        .header__container
+            padding-top: 73px
+            padding-bottom: 78px
+            +mq($medium)
+                padding-top: 117px
+                padding-bottom: 99px
+
+    .header__body-img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-position: 50% 0
+        background-repeat: no-repeat
+        object-fit: cover
+        object-position: 50%
+        overflow: auto
+        +mq($medium)
+            background-size: cover
+
+
+
+    .header__title
+        color: $white
+        text-align: center
+        &:after
+            background: $white

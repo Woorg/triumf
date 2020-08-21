@@ -1,0 +1,48 @@
+mixin header-inner(data)
+    header.header.header_inner
+        .header__top
+            .header__container.container.flex
+                button.header__trigger
+                    span.header__trigger-line
+                    span.header__trigger-line
+                    span.header__trigger-line
+
+                a.header__logo.logo(href="#")
+                    img(src="assets/images/general/logo.png", alt="Гостиница Рослеспром")
+
+                .header__langs.langs.flex
+                    a.langs__lang.langs__lang_current(href="#") ru
+                    a.langs__lang(href="#") En
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-down', className: 'langs__icon'})
+
+                .header__address.address 117405, Россия, Москва, <br/>Варшавское шоссе, д. 145 к. 8
+                    != pugHelpers.Icon.call(locals, {iconName: 'marker-icon', className: 'address__icon'})
+
+                a.header__phone.phone(href="tel:+7(495) 660-84-50") +7(495) 660-84-50
+                    != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'phone__icon'})
+                a.header__login.flex(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'header__login-icon'})
+                    | Вход
+
+        .header__body
+            img.header__body-img.lazy(data-src="assets/images/general/specials-hero.jpg", alt="")
+            img.header__body-img.header__body-img_mob.lazy(data-src="assets/images/general/special-hero-mob.jpg", alt="")
+            .header__container.header__container_first.container
+                nav.header__nav.nav
+                    ul.nav__list.flex
+                        li.nav__item
+                            a.nav__link(href="#") Номера и цены
+                        li.nav__item
+                            a.nav__link(href="#") Услуги
+                        li.nav__item.current-item
+                            a.nav__link(href="#") Спецпредложения
+                        li.nav__item
+                            a.nav__link(href="#") Отзывы
+                        li.nav__item
+                            a.nav__link(href="#") Контакты
+
+
+
+                h1.header__title.title Спецпредложения
+
+

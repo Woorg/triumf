@@ -25,8 +25,7 @@ mixin header(data)
                     | Вход
 
         .header__body
-            .header__container.container
-
+            .header__container.header__container_first.container
                 nav.header__nav.nav
                     ul.nav__list.flex
                         li.nav__item
@@ -39,6 +38,8 @@ mixin header(data)
                             a.nav__link(href="#") Отзывы
                         li.nav__item
                             a.nav__link(href="#") Контакты
+
+            .header__container.container
 
                 .header__slider
                     .header__slider-item
