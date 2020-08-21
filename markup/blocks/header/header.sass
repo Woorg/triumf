@@ -77,7 +77,10 @@
             right: 0
             content: ''
             height: 86px
-            background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.28) 64%, rgba(0, 0, 0, 0))
+            display: none
+            +mq($medium)
+                display: block
+                background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.28) 64%, rgba(0, 0, 0, 0))
 
         .header__container_first
             position: relative

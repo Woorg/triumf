@@ -7,6 +7,22 @@
         margin-right: 70px
         &:last-child
             margin-right: 0
+        &.current-item
+            .nav__link
+                position: relative
+                padding-bottom: 4px
+                color: $blue
+                &:after
+                    position: absolute
+                    top: 100%
+                    left: 50%
+                    width: 25px
+                    height: 1px
+                    content: ''
+                    background: $blue
+                    transform: translateX(-50%)
+
+
 
     &__link
         padding-top: 28px
@@ -44,6 +60,14 @@
         margin-right: 0
         +mq($medium)
             margin-right: 70px
+
+        &.current-item
+            .nav__link
+                &:after
+                    left: 15px
+                    +mq($medium)
+                        left: 50%
+
 
     .nav__link
         color: $black

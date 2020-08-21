@@ -9,7 +9,9 @@
                 padding-top: 117px
                 padding-bottom: 99px
 
-    .header__body-img
+
+    .header__body-img,
+    .header__body-img_mob
         position: absolute
         top: 0
         left: 0
@@ -20,8 +22,15 @@
         object-fit: cover
         object-position: 50%
         overflow: auto
+        display: none
         +mq($medium)
+            display: block
             background-size: cover
+
+    .header__body-img_mob
+        display: block
+        +mq($medium)
+            display: none
 
 
 

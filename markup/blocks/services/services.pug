@@ -1,2 +1,74 @@
 mixin services(data)
     .services
+        .services__container.container
+            .services__text
+                p Наша гостиница предоставляет набор дополнительных услуг, не входящих в стоимость бронирумого номера. Каждая из услуг может быть добавлена к вашему заказу в процессе онлайн-бронирования через сайт, либо при заселении на респешне.
+            .services__services
+                article.services__service.service.flex
+                    .service__image
+                        img(src="assets/images/content/service-img-1.jpg", alt="")
+                    .service__w
+                        .service__badge.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'service-icon-1', className: 'service__badge-icon'})
+                        h2.service__title Питание
+                        ul.service__list
+                            li.service__item.flex
+                                .service__term Завтрак
+                                .service__price.flex 250 <span class='service__price-curr'>₽</span><span class='service__price-text'>/ гость</span>
+
+                            li.service__item.flex
+                                .service__term Обед
+                                .service__price.flex 350 <span class='service__price-curr'>₽</span><span class='service__price-text'>/ гость</span>
+
+                            li.service__item.flex
+                                .service__term Ужин
+                                .service__price.flex 400 <span class='service__price-curr'>₽</span><span class='service__price-text'>/ гость</span>
+
+                            li.service__item.flex
+                                .service__term Полупансион
+                                .service__price.flex 600 <span class='service__price-curr'>₽</span><span class='service__price-text'>/ гость</span>
+
+                            li.service__item.flex
+                                .service__term Пансион
+                                .service__price.flex 1000 <span class='service__price-curr'>₽</span><span class='service__price-text'>/ гость</span>
+
+                article.services__service.service.flex
+                    .service__image
+                        img(src="assets/images/content/service-img-2.jpg", alt="")
+                    .service__w
+                        .service__badge.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'service-icon-2', className: 'service__badge-icon'})
+                        h2.service__title Сауна
+                        ul.service__list
+                            li.service__item.flex
+                                .service__term 1 час
+                                    .service__term-note Минимальный заказ от 2 часов
+                                .service__price.flex 1000 <span class='service__price-curr'>₽</span>
+
+
+                article.services__service.service.flex
+                    .service__image
+                        img(src="assets/images/content/service-img-3.jpg", alt="")
+                    .service__w
+                        .service__badge.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'service-icon-3', className: 'service__badge-icon'})
+                        h2.service__title Вызов такси
+                        ul.service__list
+                            li.service__item.flex
+                                .service__term Трансфер в/из аэропорта
+                                .service__price.flex 200 <span class='service__price-curr'>₽</span>
+
+                article.services__service.service.flex
+                    .service__image
+                        img(src="assets/images/content/service-img-4.jpg", alt="")
+                    .service__w
+                        .service__badge.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'service-icon-4', className: 'service__badge-icon'})
+                        h2.service__title Другие услуги
+                        ul.service__list
+                            li.service__item.flex
+                                .service__term Стирка белья
+                                .service__price.flex 200 <span class='service__price-curr'>₽</span>
+                            li.service__item.flex
+                                .service__term Будильник
+                                .service__price.flex 200 <span class='service__price-curr'>₽</span>
