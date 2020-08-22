@@ -194,8 +194,6 @@ import { tns } from "tiny-slider/src/tiny-slider"
       'services',
       'specials',
       'reviews',
-
-
     ]);
 
 

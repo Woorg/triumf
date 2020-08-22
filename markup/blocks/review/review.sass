@@ -1,0 +1,48 @@
+.review
+    padding-top: 20px
+    padding-right: 20px
+    padding-bottom: 20px
+    padding-left: 20px
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1)
+    &__name
+        margin-bottom: 14px
+        font-family: $p
+        font-size: 18px
+        font-weight: 500
+    &__meta
+        position: relative
+        margin-bottom: 17px
+        padding-bottom: 14px
+        &::after
+            position: absolute
+            top: 100%
+            left: 0
+            content: ''
+            width: 30px
+            height: 2px
+            background: $blue
+
+    &__city
+        position: relative
+        padding-right: 9px
+        color: #a1a1a1
+        &::after
+            position: absolute
+            top: 50%
+            right: 0
+            content: ''
+            width: 1px
+            height: 20px
+            background:#e1e1e1
+            transform: translateY(-50%)
+    &__date
+        padding-left: 10px
+        color: #a1a1a1
+
+    &__text
+        line-height: 1.71
+
+
+.review_without_city
+    .review__date
+        padding-left: 0

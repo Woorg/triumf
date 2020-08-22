@@ -1,0 +1,38 @@
+.pagination
+    align-items: flex-start
+    &__link
+        margin-right: 20px
+        color: $blue
+        font-size: 18px
+        line-height: 1
+        text-decoration: none
+        +tr(.3s ease)
+
+        &:hover
+            color: $black
+            +tr(.3s ease)
+
+    &__link_first,
+    &__link_last
+        position: relative
+
+    &__link-arrow
+        position: absolute
+        top: calc(50% + 2px)
+        left: 0
+        height: 8px
+        transform: translateY(-50%)
+
+    &__link_first
+        margin-right: 25px
+        .pagination__link-arrow
+            height: 8px
+            transform: translateY(-50%)
+
+    &__link_last
+        margin-left: 5px
+
+
+    &__link_current
+        color: $black
+        font-weight: 600

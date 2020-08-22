@@ -1,0 +1,10 @@
+mixin pagination(data)
+    .pagination&attributes(attributes)
+        a.pagination__link.pagination__link_first(href="#")
+            span.pagination__link-arrow &laquo;
+        a.pagination__link(href="#") 1
+        a.pagination__link.pagination__link_current(href="#") 2
+        a.pagination__link(href="#") 3
+        a.pagination__link(href="#") 4
+        a.pagination__link.pagination__link_last(href="#")
+            span.pagination__link-arrow &raquo;

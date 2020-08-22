@@ -2,12 +2,10 @@ doctype html
 html(class="no-js", lang="ru")
 
   include ../blocks/head/head.pug
-  include ../blocks/header/header.pug
+  include ../blocks/header-inner/header-inner.pug
   include ../blocks/footer/footer.pug
+  include ../blocks/pagination/pagination.pug
 
-  include ../blocks/advantages/advantages.pug
-  include ../blocks/offers/offers.pug
-  include ../blocks/about/about.pug
   include ../blocks/reviews/reviews.pug
   include ../blocks/map/map.pug
 
@@ -17,12 +15,9 @@ html(class="no-js", lang="ru")
   body.page
     |%=symbols=%
     .page__inner
-      +header()
+      +header-inner-reviews()
       main.main
-        +advantages()
-        +offers()
-        +about()
-        +reviews()
+        +reviews-wide()
         +map()
     +footer()
 
