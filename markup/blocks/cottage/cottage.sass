@@ -1,0 +1,327 @@
+.cottage
+    &__title
+        margin-top: 20px
+        margin-bottom: 20px
+        color: #ffffff
+        font-size: 36px
+        font-weight: 400
+
+    &__offer
+        margin-bottom: 30px
+        flex-wrap: wrap
+        background-color: #ffffff
+        border-radius: 14px
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18)
+        +mq($large)
+            padding-right: 112px
+            height: 60px
+            align-items: center
+            flex-wrap: nowrap
+
+    &__offer-top
+        position: relative
+        padding-top: 17px
+        padding-right: 17px
+        padding-bottom: 17px
+        padding-left: 35px
+        width: 100%
+        height: 100%
+        align-items: center
+        background-color: #ffcd4e
+        border-radius: 8px 8px 0 0
+        +mq($large)
+            // margin-right: 70px
+            padding-top: 0
+            padding-bottom: 0
+            width: auto
+            border-radius: 8px 0 0 8px
+
+
+    &__offer-icon
+        position: absolute
+        top: 0
+        right: -30px
+        display: none
+        +mq($large)
+            display: block
+
+
+    &__offer-title
+        font-size: 22px
+        font-weight: 600
+        span
+            position: relative
+            z-index: 1
+
+    &__offer-w
+        padding-top: 17px
+        padding-right: 35px
+        padding-bottom: 17px
+        padding-left: 35px
+        +mq($large)
+            padding-top: 0
+            padding-right: 0
+            padding-bottom: 0
+            padding-left: 70px
+
+
+    &__offer-text
+        line-height: 1.125
+
+
+    &__row
+        flex-wrap: wrap
+        +mq($medium)
+            margin-bottom: 30px
+            flex-wrap: nowrap
+
+    &__col
+        margin-bottom: 30px
+        width: 100%
+        +mq($medium)
+            margin-bottom: 0
+            max-width: 31.123%
+            flex-basis: 31.123%
+            width: auto
+    &__col_wide
+        +mq($medium)
+            margin-right: 30px
+            max-width: 65.73%
+            flex-basis: 65.73%
+
+
+    // &__block
+
+
+    &__block-top
+        padding-right: 30px
+        padding-left: 36px
+        height: 63px
+        align-items: center
+        background-color: #e0d2be
+        border-radius: 14px 14px 0 0
+
+    &__block-title
+        font-size: 22px
+        font-weight: 600
+
+    &__block-body
+        padding-top: 37px
+        padding-left: 37px
+        padding-right: 30px
+        padding-bottom: 27px
+        background: $white
+        flex-wrap: wrap
+        border-radius: 0 0 14px 14px
+    &__block-list
+        margin-bottom: 15px
+        max-width: 100%
+        flex-basis: 100%
+        // width: 100%
+        +mq($medium)
+            margin-bottom: 0
+        +mq($large)
+            max-width: 33.3%
+            flex-basis: 33.3%
+
+    &__block-item
+        position: relative
+        margin-bottom: 15px
+        padding-left: 16px
+        color: rgba(23, 21, 22, .7)
+        letter-spacing: 0.16px
+        line-height: 1.125
+
+        &:before
+            position: absolute
+            top: 4px
+            left: 0
+            content: ''
+            border: 1px solid #cf884a
+            width: 5px
+            height: 5px
+            border-radius: 50%
+
+    &__block_include
+        .cottage__block-top
+            justify-content: center
+            background-color: #5a8453
+
+        .cottage__block-title
+            color: $white
+
+        .cottage__block-body
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18)
+            background-color: rgba(255,255,255,.1)
+            border-radius: 0 0 14px 14px
+
+        .cottage__block-list
+            max-width: 100%
+            flex-basis: 100%
+
+        .cottage__block-item
+            color: $white
+            &::before
+                border: none
+                width: 7px
+                height: 7px
+                background-color: #63bc55
+                border-radius: 50%
+
+
+    &__block_sleeping
+        .cottage__block-body
+            padding-top: 30px
+            padding-bottom: 10px
+
+    &__block-places
+        flex-wrap: wrap
+        +mq($medium)
+            margin-right: -7px
+            margin-left: -7px
+
+
+    &__block-place
+        margin-bottom: 15px
+        max-width: 100%
+        flex-basis: 100%
+        // width: 100%
+        +mq($medium)
+            max-width: 50%
+            flex-basis: 50%
+            // width: auto
+
+    &__place-in
+        +mq($medium)
+            padding-right: 7px
+            padding-left: 7px
+
+    &__place-content
+        position: relative
+        padding-top: 13px
+        padding-right: 28px
+        padding-bottom: 18px
+        padding-left: 98px
+        background-color: #ffffff
+        box-shadow: 0 10px 25px rgba(15, 47, 61, 0.18)
+        border-radius: 5px
+    &__place-title
+        margin-bottom: 4px
+        font-size: 18px
+        font-weight: 600
+
+    &__place-text
+        color: rgba(23, 21, 22, .7)
+
+    &__place-icon
+        position: absolute
+        top: 50%
+        left: 27px
+        transform: translateY(-50%)
+
+
+
+    &__block_capacity
+        position: relative
+        padding-top: 46px
+        padding-bottom: 52px
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background-color: #cf884a
+        border-radius: 14px
+        box-shadow: 0 10px 25px rgba(15, 47, 61, 0.18)
+        &::after
+            position: absolute
+            top: 10px
+            left: 10px
+            right: 10px
+            bottom: 10px
+            content: ''
+            border: 1px dashed rgba(255, 255, 255, 0.5)
+            border-radius: 9px
+
+
+    &__capacity-w
+        position: relative
+        margin-bottom: 30px
+        width: 110px
+        height: 110px
+        align-items: center
+        justify-content: center
+        flex-shrink: 0
+        background-color: #ffffff
+        border-radius: 50%
+        box-shadow: 0 10px 20px rgba(15, 47, 61, 0.18)
+
+    &__capacity-icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        fill: $white
+
+    &__capacity-title
+        margin-bottom: 10px
+        color: #ffffff
+        font-size: 24px
+        font-weight: 600
+
+    &__capacity-text
+        display: flex
+        align-items: baseline
+        font-size: 22px
+
+    &__capacity-val
+        padding-right: 6px
+        font-family: $p
+        font-size: 40px
+        font-weight: 700
+
+
+    &__prices
+        border: 2px solid #1d5652
+        border-width: 1px 0
+        padding-top: 30px
+        padding-bottom: 30px
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        +mq($medium)
+            flex-wrap: nowrap
+
+    &__price
+        margin-right: 50px
+        margin-bottom: 30px
+        +mq($medium)
+            margin-bottom: 0
+
+    &__price-w
+        align-items: baseline
+
+    &__price-val
+        color: #cf884a
+        font-size: 30px
+        font-weight: 700
+
+    &__price-quant
+        padding-left: 4px
+        color: #ffffff
+        font-size: 18px
+        font-weight: 600
+
+    &__price-text
+        color: rgba(255,255,255, .5)
+        font-size: 14px
+        font-weight: 400
+        line-height: 1.214
+
+    &__booking
+        padding-right: 30px
+        padding-left: 30px
+        height: 51px
+        white-space: nowrap
+        align-items: center
+
+    &__booking-icon
+        margin-right: 12px

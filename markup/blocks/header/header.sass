@@ -2,13 +2,29 @@
     &__container
         padding-top: 16px
         padding-bottom: 20px
+        justify-content: center
         align-items: center
+        flex-wrap: wrap
+        +mq($medium)
+            justify-content: flex-start
+            flex-wrap: nowrap
+
+
 
     &__logo
-        margin-right: 55px
+        margin-bottom: 30px
+        +mq($medium)
+            margin-right: 55px
+            margin-bottom: 0
 
     &__contact
-        margin-right: 43px
+        margin-bottom: 30px
+        max-width: 100%
+        width: 100%
+        +mq($medium)
+            margin-right: 43px
+            margin-bottom: 0
+            width: auto
 
 
 .header_inner

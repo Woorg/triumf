@@ -39,20 +39,24 @@ img
 
 .main__row
   flex-wrap: wrap
-  +mq($small)
+  +mq($medium)
     flex-wrap: nowrap
 
 .main__breadcrumbs
   margin-bottom: 12px
 
-.main__catalog
-  +mq($small)
+.main__content
+  margin-bottom: 30px
+  width: 100%
+  +mq($medium)
+    margin-bottom: 0
     max-width: 74.166%
     flex-basis: 74.166%
+    width: auto
 
 .main__sidebar
   max-width: 277px
   width: 100%
-  +mq($small)
+  +mq($medium)
     margin-right: 30px
     order: -1

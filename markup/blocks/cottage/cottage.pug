@@ -1,0 +1,262 @@
+mixin cottage(data)
+    section.cottage
+        h1.cottage__title Коттедж «Дом рыбака»
+
+        .cottage__offer.flex
+            .cottage__offer-top.flex
+                h2.cottage__offer-title
+                    span Спецпредложение
+                != pugHelpers.Icon.call(locals, {iconName: 'offer-arrow'  , className: 'cottage__offer-icon',})
+            .cottage__offer-w
+                .cottage__offer-text Строка описывающая спецпредложение для данного раздела и еще одна строка для более длинного описания
+
+
+        .cottage__row.flex
+            .cottage__col.cottage__col_wide
+                .cottage__block.cottage__block_infra
+                    .cottage__block-top.flex
+                        h2.cottage__block-title Инфраструктура:
+
+                    .cottage__block-body.flex
+
+                        ul.cottage__block-list
+                            li.cottage__block-item Гостиная
+                            li.cottage__block-item Мини – столовая
+                            li.cottage__block-item Гардеробная
+                            li.cottage__block-item Терраса
+                            li.cottage__block-item Набор посуды
+
+                        ul.cottage__block-list
+                            li.cottage__block-item Дровяная сауна
+                            li.cottage__block-item Туалет
+                            li.cottage__block-item Душ
+                            li.cottage__block-item Телевизор
+                            li.cottage__block-item Отопление
+
+                        ul.cottage__block-list
+                            li.cottage__block-item Телефонная связь
+                            li.cottage__block-item Телевидение
+                            li.cottage__block-item Холодильник
+                            li.cottage__block-item Чайник
+                            li.cottage__block-item Камин
+
+            .cottage__col
+                .cottage__block.cottage__block_include
+                    .cottage__block-top.flex
+                        h2.cottage__block-title В стоимость входит:
+
+                    .cottage__block-body.flex
+
+                        ul.cottage__block-list
+                            li.cottage__block-item Проживание
+                            li.cottage__block-item Завтрак
+                            li.cottage__block-item Охраняемая парковка
+                            li.cottage__block-item Беседка
+                            li.cottage__block-item Уборка коттеджа
+
+
+        .cottage__row.flex
+
+            .cottage__col.cottage__col_wide
+                .cottage__block.cottage__block_sleeping
+                    .cottage__block-top.flex
+                        h2.cottage__block-title Спальные места:
+
+                    .cottage__block-body
+
+                        .cottage__block-places.flex
+                            article.cottage__block-place
+                                .cottage__place-in
+                                    .cottage__place-content
+                                        .cottage__place-title 1-я спальня
+                                        .cottage__place-text Двуспальная кровать
+                                        != pugHelpers.Icon.call(locals, {iconName: '1-bedroom'  , className: 'cottage__place-icon',})
+
+                            article.cottage__block-place
+                                .cottage__place-in
+                                    .cottage__place-content
+                                        .cottage__place-title 2-я спальня
+                                        .cottage__place-text 2 односпальные кровати
+                                        != pugHelpers.Icon.call(locals, {iconName: '2-bedroom'  , className: 'cottage__place-icon',})
+
+                            article.cottage__block-place
+                                .cottage__place-in
+                                    .cottage__place-content
+                                        .cottage__place-title 3-я спальня
+                                        .cottage__place-text 2 односпальные кровати
+                                        != pugHelpers.Icon.call(locals, {iconName: '1-bedroom'  , className: 'cottage__place-icon',})
+
+                            article.cottage__block-place
+                                .cottage__place-in
+                                    .cottage__place-content
+                                        .cottage__place-title Финская антр.
+                                        .cottage__place-text 2 односпальных места
+                                        != pugHelpers.Icon.call(locals, {iconName: '2-bedroom'  , className: 'cottage__place-icon',})
+
+
+            .cottage__col
+                .cottage__block.cottage__block_capacity.flex
+
+                    .cottage__capacity-w.flex
+                        != pugHelpers.Icon.call(locals, {iconName: 'capacity-icon'  , className: 'cottage__capacity-icon',})
+                    .cottage__capacity-title Вместимость:
+                    .cottage__capacity-text
+                        .cottage__capacity-val 8
+                        | человек
+
+
+        .cottage__prices.flex
+
+            .cottage__price
+                .cottage__price-w.flex
+                    .cottage__price-val 11 000
+                    .cottage__price-quant руб.
+
+                .cottage__price-text За коттедж в сутки (Пятница, суббота)
+
+            .cottage__price
+                .cottage__price-w.flex
+                    .cottage__price-val 7 000
+                    .cottage__price-quant руб.
+
+                .cottage__price-text За коттедж в сутки (Воскресенье – четверг)
+
+            .cottage__price
+                .cottage__price-w.flex
+                    .cottage__price-val 12 100
+                    .cottage__price-quant руб.
+
+                .cottage__price-text За коттедж в сутки (с 01.06 по 15.09.2020)
+
+            a.cottage__booking.button.flex(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'cottage-booking-icon', className: 'cottage__booking-icon',})
+
+                | Забронировать коттедж
+
+
+
+mixin cottage-second(data)
+    section.cottage
+        h1.cottage__title Коттедж «Дом рыбака»
+
+        .cottage__row.flex
+            .cottage__col.cottage__col_wide
+                .cottage__block.cottage__block_infra
+                    .cottage__block-top.flex
+                        h2.cottage__block-title Инфраструктура:
+
+                    .cottage__block-body.flex
+
+                        ul.cottage__block-list
+                            li.cottage__block-item Гостиная
+                            li.cottage__block-item Мини – столовая
+                            li.cottage__block-item Гардеробная
+                            li.cottage__block-item Терраса
+                            li.cottage__block-item Набор посуды
+
+                        ul.cottage__block-list
+                            li.cottage__block-item Дровяная сауна
+                            li.cottage__block-item Туалет
+                            li.cottage__block-item Душ
+                            li.cottage__block-item Телевизор
+                            li.cottage__block-item Отопление
+
+                        ul.cottage__block-list
+                            li.cottage__block-item Телефонная связь
+                            li.cottage__block-item Телевидение
+                            li.cottage__block-item Холодильник
+                            li.cottage__block-item Чайник
+                            li.cottage__block-item Камин
+
+            .cottage__col
+                .cottage__block.cottage__block_include
+                    .cottage__block-top.flex
+                        h2.cottage__block-title В стоимость входит:
+
+                    .cottage__block-body.flex
+
+                        ul.cottage__block-list
+                            li.cottage__block-item Проживание
+                            li.cottage__block-item Завтрак
+                            li.cottage__block-item Охраняемая парковка
+                            li.cottage__block-item Беседка
+                            li.cottage__block-item Уборка коттеджа
+
+
+        .cottage__row.flex
+
+            .cottage__col.cottage__col_wide
+                .cottage__block.cottage__block_sleeping
+                    .cottage__block-top.flex
+                        h2.cottage__block-title Спальные места:
+
+                    .cottage__block-body
+
+                        .cottage__block-places.flex
+                            article.cottage__block-place
+                                .cottage__place-in
+                                    .cottage__place-content
+                                        .cottage__place-title 1-я спальня
+                                        .cottage__place-text Двуспальная кровать
+                                        != pugHelpers.Icon.call(locals, {iconName: '1-bedroom'  , className: 'cottage__place-icon',})
+
+                            article.cottage__block-place
+                                .cottage__place-in
+                                    .cottage__place-content
+                                        .cottage__place-title 2-я спальня
+                                        .cottage__place-text 2 односпальные кровати
+                                        != pugHelpers.Icon.call(locals, {iconName: '2-bedroom'  , className: 'cottage__place-icon',})
+
+                            article.cottage__block-place
+                                .cottage__place-in
+                                    .cottage__place-content
+                                        .cottage__place-title 3-я спальня
+                                        .cottage__place-text 2 односпальные кровати
+                                        != pugHelpers.Icon.call(locals, {iconName: '1-bedroom'  , className: 'cottage__place-icon',})
+
+                            article.cottage__block-place
+                                .cottage__place-in
+                                    .cottage__place-content
+                                        .cottage__place-title Финская антр.
+                                        .cottage__place-text 2 односпальных места
+                                        != pugHelpers.Icon.call(locals, {iconName: '2-bedroom'  , className: 'cottage__place-icon',})
+
+
+            .cottage__col
+                .cottage__block.cottage__block_capacity.flex
+
+                    .cottage__capacity-w.flex
+                        != pugHelpers.Icon.call(locals, {iconName: 'capacity-icon'  , className: 'cottage__capacity-icon',})
+                    .cottage__capacity-title Вместимость:
+                    .cottage__capacity-text
+                        .cottage__capacity-val 8
+                        | человек
+
+
+        .cottage__prices.flex
+
+            .cottage__price
+                .cottage__price-w.flex
+                    .cottage__price-val 11 000
+                    .cottage__price-quant руб.
+
+                .cottage__price-text За коттедж в сутки (Пятница, суббота)
+
+            .cottage__price
+                .cottage__price-w.flex
+                    .cottage__price-val 7 000
+                    .cottage__price-quant руб.
+
+                .cottage__price-text За коттедж в сутки (Воскресенье – четверг)
+
+            .cottage__price
+                .cottage__price-w.flex
+                    .cottage__price-val 12 100
+                    .cottage__price-quant руб.
+
+                .cottage__price-text За коттедж в сутки (с 01.06 по 15.09.2020)
+
+            a.cottage__booking.button.flex(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'cottage-booking-icon', className: 'cottage__booking-icon',})
+
+                | Забронировать коттедж

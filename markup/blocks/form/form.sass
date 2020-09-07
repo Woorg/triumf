@@ -3,21 +3,96 @@
   display: flex
   flex-direction: column
 
+  &__row
+    margin-bottom: 30px
+
+  &__row_half
+    .form__field
+      margin-right: 30px
+      max-width: 50%
+      flex-basis: 50%
+      &:last-child
+        margin-right: 0
+
   &__input,
   &__message
     +resetbutton()
-    margin-bottom: 18px
-    padding-left: 18px
-    padding-right: 18px
+    border: none
+    padding-left: 30px
+    padding-right: 30px
     width: 100%
     height: 51px
     display: flex
     flex-grow: 1
-    background-color: #ffffff
-    color: #2b2e3b
-    font-size: 18px
-    text-align: left
+    background-color: rgba(36, 91, 87, 0.15)
+    color: rgba(23, 21, 22, .5)
+    font-size: 16px
+    font-weight: 400
     border-radius: 7px
 
     &:last-child
       margin-bottom: 0
+
+  &__message
+    padding-top: 17px
+    padding-bottom: 17px
+
+  &__select,
+  &__datepicker
+    position: relative
+    border: none
+    padding-left: 30px
+    padding-right: 30px
+    width: 100%
+    height: 51px
+    background-color: rgba(36, 91, 87, 0.15)
+    border-radius: 7px
+
+  &__select
+    appearance: none
+
+  &__datepicker
+    text-align: center
+
+  &__submit
+    height: 51px
+
+  &__field
+    flex-grow: 1
+
+  &__field_select,
+  &__field_datepicker
+    position: relative
+    &::after
+      position: absolute
+      top: 50%
+      right: 30px
+      content: ''
+
+  &__field_select
+    &::after
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 8px 5.5px 0 5.5px
+      border-color: rgba(23, 21, 22, .5) transparent transparent transparent
+      pointer-events: none
+      transform: translateY(-50%)
+
+  &__field_datepicker
+    .form__datepicker-icon
+      position: absolute
+      top: 50%
+      right: 30px
+
+
+
+  &__label
+    display: block
+
+  &__label-text
+    padding-bottom: 6px
+    display: block
+    color: rgba(23, 21, 22, .5)
+    font-size: 16px
+    font-weight: 600

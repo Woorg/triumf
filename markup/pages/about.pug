@@ -13,9 +13,15 @@ html(class="no-js", lang="ru")
   //- include ../blocks/gallery/gallery.pug
   //- include ../blocks/text/text.pug
   include ../blocks/content/content.pug
-  include ../blocks/catalog/catalog.pug
-  include ../blocks/breadcrumbs/breadcrumbs.pug
+  include ../blocks/slider/slider.pug
+  include ../blocks/about/about.pug
+  include ../blocks/booking/booking.pug
+
+
+
   include ../blocks/sidebar/sidebar.pug
+  include ../blocks/breadcrumbs/breadcrumbs.pug
+
 
   head
     +head(head.defaults)
@@ -26,10 +32,12 @@ html(class="no-js", lang="ru")
       main.main.container
         +breadcrumbs().main__breadcrumbs
         .main__row.flex
-          +content().main__content
-            +catalog(catalog)
+            +content().main__content
+                +slider()
+                +about-second()
+                +booking()
 
-          +sidebar(sidebar).main__sidebar
+            +sidebar(sidebar).main__sidebar
 
 
     +footer()

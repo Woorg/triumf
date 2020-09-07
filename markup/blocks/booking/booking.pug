@@ -1,0 +1,42 @@
+mixin booking(data)
+    section.booking
+        h2.booking__title.title.title_secondary Бронирование
+        .booking__w
+            form.booking__form.form(action="", method="post")
+                .booking__form-top
+                    .form__row.flex
+                        .form__field.form__field_select
+                            select.form__select.select(name="")
+                                option(value="") Размещение
+                                option(value="") Размещение 1
+                                option(value="") Размещение 2
+                                option(value="") Размещение 3
+                                option(value="") Размещение 4
+                    .form__row.form__row_half.flex
+                        .form__field.form__field_datepicker
+                            != pugHelpers.Icon.call(locals, {iconName: 'date-picker'  , className: 'form__datepicker-icon',})
+                            label.form__label
+                                span.form__label-text Дата заезда:
+                                input.form__datepicker(type="text" name="" value="28.08.2020")
+
+
+                        .form__field.form__field_datepicker
+                            != pugHelpers.Icon.call(locals, {iconName: 'date-picker'  , className: 'form__datepicker-icon',})
+                            label.form__label
+                                span.form__label-text Дата выезда:
+                                input.form__datepicker(type="text" name="" value="05.09.2020")
+
+                .booking__form-body
+                    .form__row.form__row_half.flex
+                        .form__field.form__field_input
+                            input.form__input(type="text" name="" value="" placeholder="Введите ваше имя")
+
+                        .form__field.form__field_phone
+                            input.form__input(type="text" name="" value="" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _")
+
+                    .form__row
+                        .form__field.form__field_message
+                            textarea.form__message(name="" placeholder="Комментарий")
+
+
+                    input.booking__form-submit.form__submit.button.flex(type="submit" value="Отправить")

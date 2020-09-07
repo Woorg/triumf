@@ -5,3 +5,14 @@ mixin breadcrumbs(data)
                 a.breadcrumbs__link(href="#") Главная »
             li.breadcrumbs__item
                 span.breadcrumbs__last Коттеджи
+
+
+mixin breadcrumbs-cottages(data)
+    .breadcrumbs&attributes(attributes)
+        ul.breadcrumbs__list.flex
+            li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Главная »
+            li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Коттеджи »
+            li.breadcrumbs__item
+                span.breadcrumbs__last Коттедж «Дом рыбака»

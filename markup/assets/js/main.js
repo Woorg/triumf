@@ -1,5 +1,5 @@
 import svg4everybody from 'svg4everybody';
-// import { tns } from "tiny-slider/src/tiny-slider"
+import { tns } from "tiny-slider/src/tiny-slider"
 // import pickmeup from 'pickmeup';
 // import exhibitionSlider from '../../blocks/exhibition/exhibition';
 // import aboutSlider from '../../blocks/about/about';
@@ -67,20 +67,29 @@ import svg4everybody from 'svg4everybody';
 
     // Sliders
 
-    // if ($('.hero__slider').length > 0) {
-    //   const slider = tns({
-    //     container: '.hero__slider',
-    //     autoHeight: true,
-    //     items: 1,
-    //     mode: 'gallery',
-    //     speed: 300,
-    //     mouseDrag: true,
-    //     nav: false,
-    //     controls: false,
-    //     autoplayButton: false,
+    if ($('.slider__object').length > 0) {
+      const slider = tns({
+        container: '.slider__object',
+        // autoHeight: true,
+        items: 1,
+        mode: 'gallery',
+        // slideBy: 'page',
+        autoplay: true,
+        mouseDrag: true,
+        // nav: false,
+        // controls: false,
+        // autoplayButton: false,
+        navAsThumbnails: true,
+        prevButton: ".slider__arrow_prev",
+        nextButton: ".slider__arrow_next",
 
-    //   });
-    // }
+        navContainer: ".slider__thumbnails",
+
+
+      });
+    }
+
+
 
     // Gallery
 
@@ -129,6 +138,10 @@ import svg4everybody from 'svg4everybody';
     pageWidget([
       'index',
       'category',
+      'about',
+      'cottages',
+      'cottages-2',
+
 
     ]);
 
