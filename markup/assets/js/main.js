@@ -91,6 +91,27 @@ import { tns } from "tiny-slider/src/tiny-slider"
 
 
 
+    // Hero
+
+    const $heroCottage = $('.hero__cottage-w');
+    const $heroCard = $('.hero__card');
+
+    $heroCottage.on( 'click', function (e) {
+      e.preventDefault();
+
+      $heroCard.toggleClass('hero__card_active');
+
+    });
+
+
+    const $heroClose = $('.hero__close');
+
+    $heroClose.on( 'click', function (e) {
+      e.preventDefault();
+      $heroCard.removeClass('hero__card_active');
+    });
+
+
     // Gallery
 
     const $galleryLink = $('.gallery__link');

@@ -1,7 +1,258 @@
 .hero
-    background-position: 0 0
-    background-repeat: no-repeat
-    background-size: cover
-    overflow: hidden
-
     position: relative
+    height: 795px
+    background-position: 50% 0
+    background-repeat: no-repeat
+    background-size: 1400px 795px
+    display: none
+    overflow: hidden
+    +mq($large)
+        display: block
+    &__container
+        z-index: 1
+        position: relative
+        // top: 0
+        // left: 50%
+        height: 795px
+        // transform: translateX(-50%)
+
+    &__picture
+        position: absolute
+        top: 0
+        left: 50%
+        width: 1400px
+        // max-width: 1400%
+        // width: 100%
+        height: 795px
+        transform: translateX(-50%)
+        // transform: translateX(-50%)
+
+    // &__picture-source
+    //     height: 100%
+
+    // &__picture-image
+    //     height: 100%
+    //     display: block
+
+    &__nav
+        position: relative
+        z-index: 1
+        top: 90px
+        max-width: 277px
+        width: 100%
+        box-shadow: 0 20px 50px rgba(41, 23, 8, 0.5)
+
+
+    &__cottage-w
+        position: absolute
+        // top: 186px
+        top: 23.396%
+        right: 296px
+        // right: 15.486%
+        cursor: pointer
+        &::after
+            position: absolute
+            top: -58px
+            left: -30px
+            content: ''
+            width: 179px
+            height: 179px
+            background: url('../images/general/hero-blur.png') 0 0 no-repeat
+
+        &:hover
+            .hero__badge
+                // display: block
+                opacity: 1
+                transform: translateY(-90%)
+                +tr(.3s ease)
+    &__cottage
+        z-index: 1
+        position: absolute
+        top: 0
+        left: 0
+        width: 125px
+        height: 113px
+        background: url('../images/general/hero-cottage.png') 0 0 no-repeat
+        // transform: scale(.)
+    &__badge
+        position: absolute
+        top: 0
+        left: calc(-50% - 100px)
+
+        width: 316px
+        height: 116px
+        // display: none
+        background: url('../images/general/hero-badge.png') 50% 0 no-repeat
+        background-size: cover
+        opacity: 0
+        transform: translateY(0%)
+        +tr(.3s ease)
+
+
+    &__badge-text
+        position: absolute
+        top: 50%
+        left: 50%
+        padding-bottom: 25px
+        font-size: 20px
+        white-space: nowrap
+        transform: translate(-50%, -50%)
+
+
+    &__card
+        position: absolute
+        top: 105px
+        left: 50%
+        padding-top: 18px
+        padding-right: 38px
+        padding-left: 30px
+        width: 414px
+        height: 642px
+        display: none
+        // background-color: rgba(255, 255, 255, 0.88)
+        background: url('../images/general/hero-card.png') 0 0 no-repeat
+        background-size: cover
+        transform: translateX(-50%)
+
+    &__card_active
+        display: block
+
+
+    &__card-picture
+        object-fit: cover
+
+    &__card-image
+        width: 100%
+        display: block
+        overflow: hidden
+        border-radius: 3px
+
+    &__card-body
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        padding-top: 16px
+        padding-right: 16px
+        padding-left: 22px
+        padding-bottom: 13px
+
+    &__card-bottom
+        padding-top: 16px
+        padding-right: 16px
+        padding-left: 22px
+        padding-bottom: 22px
+
+    &__card-title
+        margin-bottom: 13px
+        font-size: 26px
+    &__card-text
+        margin-bottom: 20px
+        height: 63px
+        overflow: hidden
+        color: rgba(23, 21, 22, .7)
+        font-size: 14px
+        line-height: 1.428
+    &__card-price
+        font-size: 18px
+        span
+            color: #cf884a
+            font-size: 30px
+            font-weight: 700
+
+    &__card-breakfast
+        border: 2px solid #63bc55
+        margin-bottom: 14px
+        height: 52px
+        justify-content: center
+        align-items: center
+        color: #4ba43d
+        font-size: 16px
+        font-weight: 700
+        border-radius: 5px
+
+    &__breakfast-icon
+        margin-right: 8px
+
+    &__card-meta
+        margin-right: -7px
+        margin-left: -7px
+        margin-bottom: 21px
+
+    &__meta-item
+        max-width: 50%
+        flex-basis: 50%
+
+    &__meta-w
+        position: relative
+        padding-right: 7px
+        padding-left: 7px
+
+    &__meta-content
+        position: relative
+        padding-top: 8px
+        padding-left: 55px
+        height: 55px
+        flex-direction: column
+        align-items: center
+        background-color: #ffffff
+        text-align: center
+        border-radius: 5px
+        box-shadow: 0 10px 25px rgba(15, 47, 61, 0.18)
+        &::after
+            position: absolute
+            top: 50%
+            left: 60px
+            content: ''
+            width: 1px
+            height: 36px
+            background: rgba(0, 0, 0, 0.1)
+            transform: translateY(-50%)
+
+
+
+
+
+    &__meta-val
+        margin-bottom: 3px
+        font-size: 26px
+        font-weight: 700
+        span
+            font-size: 24px
+
+    &__meta-text
+        color: rgba(23, 21, 22, .5)
+        font-size: 12px
+
+    &__meta-icon
+        position: absolute
+        top: 50%
+        left: 20px
+        fill: transparent
+        color: #0c4743
+        transform: translate( 0, -50%)
+
+    &__card-button
+        // margin-right: 3px
+        // margin-left: 30px
+        height: 51px
+        justify-content: center
+        align-items: center
+        background-color: #ffcd4e
+        color: #171516
+        &:hover
+            background-color: darken(#ffcd4e, 10)
+
+    &__close
+        +resetbutton()
+        position: absolute
+        top: 30px
+        right: 48px
+        width: 21px
+        height: 21px
+        background-color: #ffffff
+        border-radius: 50%
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35)
+
+    &__close-icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)

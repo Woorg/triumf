@@ -1,18 +1,25 @@
 .about
     &__container
-        padding-top: 130px
+        padding-top: 65px
         padding-bottom: 65px
+        +mq($medium)
+            padding-top: 130px
     &__title
         margin-bottom: 60px
         text-align: center
     &__row
-        margin-right: -32px
-        margin-left: -32px
+        flex-wrap: wrap
+        +mq($medium)
+            margin-right: -32px
+            margin-left: -32px
+            flex-wrap: nowrap
     &__col
-        padding-right: 32px
-        padding-left: 32px
-        max-width: 50%
-        flex-basis: 50%
+
+        +mq($medium)
+            padding-right: 32px
+            padding-left: 32px
+            max-width: 50%
+            flex-basis: 50%
 
     &__text
         p

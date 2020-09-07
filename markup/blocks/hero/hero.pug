@@ -1,4 +1,54 @@
 mixin hero(data)
-    .hero
-        .hero__container
-            img.lazy(data-src='url(assets/images/content/main-image.png)')
+    .hero.lazy(data-bg='url(assets/images/content/main-image.png)')
+        .hero__container.container
+            +sidebar-hero(sidebar)
+
+            .hero__cottage-w
+                a.hero__cottage
+                .hero__badge
+                    span.hero__badge-text Коттедж «Колокольчик»
+
+            .hero__card
+                .hero__card-top
+                    button.hero__close
+                        != pugHelpers.Icon.call(locals, {iconName: 'close-icon', className: 'hero__close-icon',})
+
+
+                    picture.hero__card-picture
+                        source.hero__card-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/hero-card-img@2x.webp 2x, assets/images/content/hero-card-img.webp 1x')
+                        source.hero__card--source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/hero-card-img@2x.png 2x, assets/images/content/hero-card-img.png 1x')
+                        img.hero__card-image.lazy(data-src='assets/images/content/hero-card-img@2x.png' alt="hero card image")
+
+                .hero__card-body
+                    .hero__card-title Коттедж «Колокольчик»
+
+                    .hero__card-text Равным образом начало повседневного их обитания по формированию позиции важной в значительной степени обуславливает создан...
+
+                    .hero__card-price от <span>6 100</span> руб.
+
+                .hero__card-bottom
+                    .hero__card-breakfast.flex
+                        != pugHelpers.Icon.call(locals, {iconName: 'breakfast-icon', className: 'hero__breakfast-icon',})
+
+                        | Завтрак включен!
+
+                    .hero__card-meta.flex
+                        .hero__meta-item.hero__meta-item_rooms
+                            .hero__meta-w
+                                .hero__meta-content.flex
+                                    .hero__meta-val 4
+                                    .hero__meta-text Комнат
+                                    != pugHelpers.Icon.call(locals, {iconName: 'rooms-icon', className: 'hero__meta-icon',})
+
+                        .hero__meta-item.hero__meta-item_capacity
+                            .hero__meta-w
+                                .hero__meta-content.flex
+                                    .hero__meta-val 5 <span>чел</span>
+                                    .hero__meta-text Вместимость
+                                    != pugHelpers.Icon.call(locals, {iconName: 'capacity-icon', className: 'hero__meta-icon', iconWidth: '31', iconHeight: '26'})
+
+                    a.hero__card-button.button.flex(href="") Забронировать
+
+
+        //- .hero__picture
+        //-     img.hero__picture-image(src='assets/images/content/main-image.png' alt="hero image")

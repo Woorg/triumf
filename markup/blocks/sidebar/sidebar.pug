@@ -17,3 +17,24 @@ mixin sidebar(data)
                             a.nav__link.flex(href="#")
                                 span.nav__link-text #{item.title}
                                 != pugHelpers.Icon.call(locals, {iconName: navIcon, className: 'nav__icon',})
+
+
+
+mixin sidebar-hero(data)
+    - var nav = data.nav;
+    nav.hero__nav.nav&attributes(attributes)
+        ul.nav__list
+            each item in nav
+                - var itemClass = item.active;
+                - var navIcon = item.icon;
+
+                if itemClass
+                    li.nav__item.nav__item_active
+                        a.nav__link.flex(href="#")
+                            span.nav__link-text #{item.title}
+                            != pugHelpers.Icon.call(locals, {iconName: navIcon  , className: 'nav__icon',})
+                else
+                    li.nav__item
+                        a.nav__link.flex(href="#")
+                            span.nav__link-text #{item.title}
+                            != pugHelpers.Icon.call(locals, {iconName: navIcon, className: 'nav__icon',})
