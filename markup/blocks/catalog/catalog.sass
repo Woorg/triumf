@@ -1,0 +1,118 @@
+.catalog
+    overflow: hidden
+    &__list
+        margin-right: -15px
+        margin-left: -15px
+        flex-wrap: wrap
+    &__item
+        margin-bottom: 40px
+        padding-right: 15px
+        padding-left: 15px
+        flex-grow: 1
+        +mq($medium)
+            max-width: 50%
+            flex-basis: 50%
+        +mq($large)
+            max-width: 33.3%
+            flex-basis: 33.3%
+
+    &__item_special
+
+        .catalog__button
+            background-color: #ffcd4e
+            color: #171516
+            &:hover
+                background-color: darken(#ffcd4e, 10)
+
+    &__badge
+        position: absolute
+        top: 10px
+        right: 10px
+        padding-top: 10px
+        padding-right: 16px
+        padding-bottom: 9px
+        padding-left: 16px
+        background-color: #ffcd4e
+        color: #171516
+        font-size: 10px
+        font-weight: 600
+        letter-spacing: 0.9px
+        text-transform: uppercase
+        border-radius: 5px
+
+    &__item-w
+        width: 100%
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18)
+        border-radius: 8px
+
+    &__top
+        .catalog__link
+            position: relative
+
+
+    &__picture-image
+        display: block
+        width: 100%
+        object-fit: cover
+        border-radius: 8px 8px 0 0
+
+
+
+
+    &__body
+        padding-top: 20px
+        padding-right: 26px
+        padding-left: 26px
+        padding-bottom: 23px
+        background-color: #ffffff
+        border-radius: 0 0 8px 8px
+
+
+    &__link
+        color: inherit
+        display: block
+        text-decoration: none
+
+    &__title
+        padding-bottom: 9px
+        color: #171516
+        font-size: 20px
+        font-weight: 400
+    &__meta
+        border-top: 1px solid rgba(23, 21, 22, 0.1)
+        padding-top: 20px
+        padding-bottom: 24px
+        justify-content: space-between
+    // &__meta-item
+
+
+    &__meta-title
+        margin-bottom: 5px
+        color: rgba(23, 21, 22, 0.5)
+        font-size: 16px
+        font-weight: 400
+
+    &__meta-quant
+        color: #cf884a
+        font-size: 20px
+        font-weight: 700
+
+    &__meta-text
+        color: #171516
+        font-size: 16px
+        font-weight: 400
+
+    &__meta-price
+        .catalog__meta-quant
+            padding-right: 4px
+
+    &__meta-places
+        .catalog__meta-quant
+            padding-right: 4px
+            padding-left: 4px
+
+
+
+    &__button
+        display: flex
+        justify-content: center

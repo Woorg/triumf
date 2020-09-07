@@ -1,0 +1,23 @@
+mixin questions(data)
+    section.questions
+        .questions__container.container
+            h2.questions__title.title Остались вопросы?
+            .questions__text Если у вас остались вопросы, то вы может оставить свой номер: мы позвоним вам и проконсультируем по всем вопросам. Заполните простую форму:
+
+            form.casco__form.form.form_fourth(action="", method="post")
+                .form__row.flex
+                  input.form__input(type="text", value="", placeholder="Ваше имя")
+                  input.form__input(type="text", value="", placeholder="Номер телефона")
+                input.form__submit.button.button_second(type="submit", value="отправить заявку")
+
+            .questions__messages Или свяжитесь с нами по телефону или в мессенджерах:
+
+            .questions__phone.phone
+              a.phone__val(href="#") +7 (996) 284-85-48
+
+            .questions__messengers.messengers
+              .messengers__links.flex
+                  a.messengers__link.messengers__link_telegram(href="#") Телеграм
+                  a.messengers__link.messengers__link_whatsup(href="#") Whats'up
+                  a.messengers__link.messengers__link_viber(href="#") Viber
+                  a.messengers__link.messengers__link_message(href="#") Message

@@ -1,155 +1,23 @@
 .service
-    background-color: #ffffff
-    align-self: flex-start
-    flex-wrap: wrap
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1)
-    +mq($medium)
-        flex-wrap: nowrap
-
-    &:nth-child(1)
-        .service__badge-icon
-            width: 13px
-            height: 24px
-            +mq($medium)
-                width: auto
-                height: auto
-
-    &:nth-child(2)
-        .service__badge-icon
-            width: 21px
-            height: 33px
-            +mq($medium)
-                width: auto
-                height: auto
-    &:nth-child(3)
-        .service__badge-icon
-            width: 20px
-            height: 17px
-            +mq($medium)
-                width: auto
-                height: auto
-
-    &:nth-child(4)
-        .service__badge-icon
-            width: 23px
-            height: 21px
-            +mq($medium)
-                width: auto
-                height: auto
-
-
-    &__image,
-    &__w
-        width: 100%
-        +mq($medium)
-            width: auto
-            max-width: 50%
-            flex-basis: 50%
-
-    &__image
-        display: none
-        line-height: 0
-        +mq($medium)
-            margin-right: 10px
-            display: block
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
-            object-position: 50%
-
-    &__w
+    &__link
         position: relative
-        padding-top: 15px
-        padding-right: 13px
-        padding-bottom: 20px
-        padding-left: 68px
-        +mq($medium)
-            margin-left: 10px
-            padding-top: 23px
-            padding-right: 44px
-            padding-left: 96px
-            padding-bottom: 30px
-
-    &__badge
-        position: absolute
-        top: -5px
-        left: 12px
-        width: 38px
-        height: 41px
-        justify-content: center
-        align-items: center
-        background-color: #399dde
-        +mq($medium)
-            top: -10px
-            left: 0
-            width: 76px
-            height: 81px
-
-    &__badge-icon
-        flex-shrink: 1
-        color: $white
+        min-height: 100%
+        display: block
+        text-decoration: none
 
     &__title
-        margin-bottom: 22px
-        font-family: $p
-        font-size: 18px
-        font-weight: 700
-        +mq($medium)
-            font-size: 20px
-
-
-    &__list
-        border-top: 1px solid #E1E1E1
-
-    &__item
-        position: relative
-        border-bottom: 1px solid #E1E1E1
-        padding-top: 20px
-        padding-bottom: 20px
-        padding-left: 32px
-        align-items: baseline
-        +mq($medium)
-            padding-top: 24px
-            padding-bottom: 24px
-        &:before
-            position: absolute
-            top: 50%
-            left: 9px
-            content: ''
-            width: 6px
-            height: 6px
-            background-color: #399dde
-            border-radius: 50%
-            transform: translateY(-50%)
-
-    &__term
-        font-size: 14px
-        font-weight: 600
-
-    &__term-note
-        margin-top: 4px
-        font-size: 12px
-        font-weight: normal
-        color: #a1a1a1
-
-    &__price
-        margin-left: auto
-        margin-bottom: 5px
-        margin-right: 5px
-        font-size: 18px
-        font-weight: bold
-        align-items: center
-        white-space: nowrap
-        +mq($medium)
-            margin-bottom: 0
-
-    &__price-curr
-        padding-left: 5px
-        font-family: $h
+        z-index: 1
+        position: absolute
+        bottom: 38px
+        left: 40px
+        color: $white
+        font-size: 30px
         font-weight: 400
-
-    &__price-text
-        font-size: 14px
-        font-weight: bold
-
+    &__picture
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        object-fit: cover
+        object-position: 50% 0

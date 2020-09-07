@@ -1,5 +1,5 @@
 import svg4everybody from 'svg4everybody';
-import { tns } from "tiny-slider/src/tiny-slider"
+// import { tns } from "tiny-slider/src/tiny-slider"
 // import pickmeup from 'pickmeup';
 // import exhibitionSlider from '../../blocks/exhibition/exhibition';
 // import aboutSlider from '../../blocks/about/about';
@@ -55,129 +55,66 @@ import { tns } from "tiny-slider/src/tiny-slider"
 
     // Nav
 
-    const $navTrigger = $('.header__trigger');
-    const $navMain = $('.header__nav');
+    // const $navTrigger = $('.header__trigger');
+    // const $navMain = $('.header__nav');
 
 
-    $navTrigger.on( 'click', function(e) {
-      $(this).toggleClass('header__trigger_active');
-      $navMain.toggleClass('header__nav_active nav_active');
-    });
-
-
-
-    // Lang switcher
-
-    const $langTrigger = $('.langs__lang');
-
-    $langTrigger.on( 'click', function(e) {
-      $(this).parent().toggleClass('langs_active');
-      $(this).removeClass('langs__lang_current');
-      $(this).siblings().addClass('langs__lang_current');
-
-    });
-
+    // $navTrigger.on( 'click', function(e) {
+    //   $(this).toggleClass('header__trigger_active');
+    //   $navMain.toggleClass('header__nav_active nav_active');
+    // });
 
 
     // Sliders
 
-    if ($('.header__slider').length > 0) {
-      const slider = tns({
-        container: '.header__slider',
-        // autowidth: true,
-        autoHeight: true,
-        items: 1,
-        // autoplay: true,
-        mode: 'carousel',
-        speed: 300,
-        mouseDrag: true,
-        nav: true,
-        navPosition: 'bottom',
-        // navAsThumbnails: true,
-        controls: false,
-        autoplayButton: false,
-        autoplayButtonOutput: false,
-        // lazyload: true,
-        // lazyloadSelector: '.header__slider-img'
-        responsive: {
-          0: {
-            nav: false
-          },
-          640: {
-            nav: true
-          },
+    // if ($('.hero__slider').length > 0) {
+    //   const slider = tns({
+    //     container: '.hero__slider',
+    //     autoHeight: true,
+    //     items: 1,
+    //     mode: 'gallery',
+    //     speed: 300,
+    //     mouseDrag: true,
+    //     nav: false,
+    //     controls: false,
+    //     autoplayButton: false,
 
-        }
-      });
-    }
+    //   });
+    // }
+
+    // Gallery
+
+    const $galleryLink = $('.gallery__link');
 
 
-    if ($('.reviews__slider').length > 0) {
-        const slider = tns({
-            container: '.reviews__slider',
-            autoHeight: true,
-            // autoplay: true,
-            speed: 300,
-            mouseDrag: true,
-            nav: false,
-            // navAsThumbnails: true,
-            controls: true,
-            arrowKeys: true,
-            autoplayButton: false,
-            autoplayButtonOutput: false,
-            navPosition: 'bottom',
-            controlsContainer: '.reviews__slider-nav',
-            prevButton: '.reviews__slider-arrow_left',
-            nextButton: '.reviews__slider-arrow_right',
-            responsive: {
-              0: {
-                items: 1,
-              },
-              640: {
-                items: 3,
-                nav: true
-              },
-
-            }
-        });
-    }
-
-
-    // Datepicker
-
-    // const plus_5_days = new Date;
-    // plus_5_days.setDate(plus_5_days.getDate() + 5);
-
-    pickmeup.defaults.locales['ru'] = {
-      days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-      daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-      daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-      months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-      monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
-    };
-
-    let now = new Date;
-
-    pickmeup('.search-room__date-result', {
-      position: 'bottom',
-      hide_on_select: true,
-      mode: 'range',
-      calendars: 2,
-      locale: 'ru',
-      min: now,
-      // render: function (date) {
-      //   if (date <= now) {
-      //     return { disabled: false, class_name: 'date-in-past' };
-      //   }
-      //   return {};
-      // }
-      // date: [
-      //   new Date,
-      //   plus_5_days
-      // ]
+    $galleryLink.magnificPopup({
+      'type': 'image',
+      'gallery': {
+        enabled: true
+      }
     });
 
 
+    // Text more
+
+    const $text = $('.text__text');
+    const $textTrigger = $('.text__more');
+
+    $textTrigger.on( 'click', function (e) {
+      e.preventDefault();
+      const $this = $(this);
+      $this.toggleClass('text__more_active');
+      $text.toggleClass('text__text_active');
+      if ($this.hasClass('text__more_active')) {
+        $this.html('Скрыть текст <svg class= "text__more-icon" width = "11px" height = "6px" ><use xlink: href="#arrow-down"></use></svg>');
+      } else {
+        $this.html('Раскрыть текст полностью <svg class= "text__more-icon" width = "11px" height = "6px" ><use xlink: href="#arrow-down"></use></svg>');
+      }
+
+    });
+
+
+    /* Page list */
 
     function pageWidget(pages) {
       const widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
@@ -191,10 +128,12 @@ import { tns } from "tiny-slider/src/tiny-slider"
 
     pageWidget([
       'index',
-      'services',
-      'specials',
-      'reviews',
+      'category',
+
     ]);
+
+
+
 
 
 

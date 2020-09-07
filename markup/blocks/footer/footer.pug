@@ -1,29 +1,26 @@
 mixin footer(data)
     footer.footer
-        .footer__container.container
-            .footer__top.flex
-                a.footer__logo.logo(href="#")
-                    img(src="assets/images/general/logo.png", alt="Гостиница Рослеспром")
+        .footer__container.container.flex
+            a.footer__logo.logo(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'logo', className: 'logo__image',})
 
-                nav.footer__nav.nav.nav_secondary
-                    ul.nav__list.flex
-                        li.nav__item
-                            a.nav__link(href="#") Номера и цены
-                        li.nav__item
-                            a.nav__link(href="#") Услуги
-                        li.nav__item
-                            a.nav__link(href="#") Спецпредложения
-                        li.nav__item
-                            a.nav__link(href="#") Отзывы
-                        li.nav__item
-                            a.nav__link(href="#") Контакты
+            .footer__contact.footer__contact_address.contact.contact_address
+                .contact__title Наш адрес
+                .contact__text Лахденпохский район, Терву
+                a.contact__map(href="#") Показать на карте
+                != pugHelpers.Icon.call(locals, {iconName: 'marker-icon', className: 'contact__icon',})
 
-                .footer__contacts
-                    a.footer__phone.phone.phone_second(href="tel:+7(495) 660-84-50") +7(495) 660-84-50
-                        != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'phone__icon'})
-                    a.footer__email(href="mailto:sales@rushotel.ru") sales@rushotel.ru
+            .footer__contact.footer__contact_booking.contact.contact_booking
+                .contact__title Отдел бронирования
+                a.contact__text(href="tel:+78005554869") 8 800 555-48-69
+                != pugHelpers.Icon.call(locals, {iconName: 'whatsapp-icon', className: 'contact__icon',})
 
-            .footer__bottom.flex
-                .footer__copyright ©Copyright - Рослеспром 2020
-                .footer__created Разработка и система бронирования:
-                    a.footer__created-link(href="#") FrontDesk24
+            .footer__contact.footer__contact_phone.contact.contact_phone
+                .contact__title Телефон базы
+                a.contact__text(href="tel:+78005554869") 8 800 555-48-69
+                != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'contact__icon',})
+
+            a.footer__button.button(href="#") Бронирование
+
+        .footer__bottom
+            small.footer__copyright Copyright © 2015—2020 База отдыха «Триумф»

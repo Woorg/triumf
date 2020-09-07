@@ -11,72 +11,60 @@
 .flex_bottom
   align-items: flex-end
 
-.title
-  position: relative
-  padding-bottom: 16px
-  color: $black
-  font-family: $p
-  font-size: 30px
-  font-weight: 500
-  +mq($medium)
-    padding-bottom: 12px
-    font-size: 34px
-
-  &::after
-    position: absolute
-    top: 100%
-    left: 50%
-    content: ''
-    width: 63px
-    height: 2px
-    background: $blue
-    transform: translateX(-50%)
 
 
 .button
   +resetbutton()
-  padding-top: 14px
-  padding-right: 12px
-  padding-bottom: 14px
-  padding-left: 12px
-  height: 40px
-  text-align: center
-  background-color: $blue
-  color: $white
-  font-size: 12px
+  padding-top: 12px
+  padding-right: 44px
+  padding-bottom: 12px
+  padding-left: 44px
+  height: 41px
+  background-color: #63bc55
+  color: #fff
+  font-size: 16px
   font-weight: bold
-  line-height: 1
+  text-align: center
   text-decoration: none
-  text-transform: uppercase
-  +tr( .3s ease)
+  border-radius: 5px
+  +tr(.3s ease)
   &:hover
-    background-color: darken($blue, 10)
-    +tr( .3s ease)
+    background-color: darken(#63bc55, 10)
+    +tr(.3s ease)
+
+
+.title
+  position: relative
+  padding-bottom: 80px
+  color: #ffffff
+  font-size: (50px / 2)
+  font-weight: 400
+  +mq($medium)
+    font-size: 50px
+
+  &:after
+    position: absolute
+    top: calc(100% - 60px)
+    left: 50%
+    content: ''
+    width: 100%
+    height: 57px
+    background: url('../images/general/line.png')
+    background-size: cover
+    background-position: 50% 0
+    background-repeat: no-repeat
+    transform: translateX(-50%)
 
 
 .wysiwyg
   h2
-  font-size: 24px
-  line-height: 1.333
-  +mq($small)
-    font-size: 48px
-    line-height: 1.166
+    margin-bottom: 23px
+    color: #171516
+    font-size: 32px
+    font-weight: 400
 
   p
-    margin-bottom: 16px
-    font-size: 14px
-    line-height: 1.428
-    &:last-of-type
-      margin-bottom: 24px
-    +mq($small)
-      margin-bottom: 40px
-      font-size: 18px
-
-  i
-    font-size: 14px
-    line-height: 1.428
-    font-style: italic
-
-    +mq($small)
-      font-size: 24px
-      line-height: 1.333
+    margin-bottom: 30px
+    color: rgba(23, 21, 22, .7)
+    font-size: 16px
+    line-height: 1.277

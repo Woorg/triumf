@@ -1,0 +1,41 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../blocks/head/head.pug
+  include ../blocks/header/header.pug
+  include ../blocks/footer/footer.pug
+
+  //- include ../blocks/hero/hero.pug
+  //- include ../blocks/about/about.pug
+  //- include ../blocks/services/services.pug
+  //- include ../blocks/advantages/advantages.pug
+  //- include ../blocks/pluses/pluses.pug
+  //- include ../blocks/gallery/gallery.pug
+  //- include ../blocks/text/text.pug
+  include ../blocks/catalog/catalog.pug
+  include ../blocks/breadcrumbs/breadcrumbs.pug
+  include ../blocks/sidebar/sidebar.pug
+
+
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    .page__inner
+      +header-inner()
+      main.main.container
+        +breadcrumbs().main__breadcrumbs
+        .main__row.flex
+          +catalog(catalog).main__catalog
+          +sidebar(sidebar).main__sidebar
+
+
+    +footer()
+
+    script(src='%=static=%js/separate-js/lazyload.min.js' defer)
+    script(src='%=static=%js/separate-js/jquery.min.js' defer)
+
+    script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js' defer)
+    //- script(src='%=static=%js/separate-js/slick.min.js' defer)
+
+    script(src='%=static=%js/main%=hash=%%=min=%.js' defer)

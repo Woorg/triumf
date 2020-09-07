@@ -1,0 +1,78 @@
+mixin gallery(data)
+    section.gallery
+        .gallery__container.container
+
+            h2.gallery__title.title Фотогаллерея
+
+            .gallery__list.flex
+                article.gallery__item
+                    a.gallery__link(href="assets/images/content/gallery-1@2x.png")
+                        picture.gallery__picture
+                            source.gallery__picture-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/gallery-1@2x.webp 2x, assets/images/content/gallery-1.webp 1x')
+                            source.gallery__picture-source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/gallery-1@2x.png 2x, assets/images/content/gallery-1.png 1x')
+                            img.gallery__picture-image.lazy(data-src='assets/images/content/gallery-1@2x.png' alt="service image")
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery__icon',})
+                article.gallery__item
+                    a.gallery__link(href="assets/images/content/gallery-2@2x.png")
+                        picture.gallery__picture
+                            source.gallery__picture-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/gallery-2@2x.webp 2x, assets/images/content/gallery-2.webp 1x')
+                            source.gallery__picture-source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/gallery-2@2x.png 2x, assets/images/content/gallery-2.png 1x')
+                            img.gallery__picture-image.lazy(data-src='assets/images/content/gallery-2@2x.png' alt="service image")
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery__icon',})
+
+                article.gallery__item
+                    a.gallery__link(href="assets/images/content/gallery-3@2x.png")
+                        picture.gallery__picture
+                            source.gallery__picture-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/gallery-3@2x.webp 2x, assets/images/content/gallery-3.webp 1x')
+                            source.gallery__picture-source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/gallery-3@2x.png 2x, assets/images/content/gallery-3.png 1x')
+                            img.gallery__picture-image.lazy(data-src='assets/images/content/gallery-3@2x.png' alt="service image")
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery__icon',})
+
+                article.gallery__item
+                    a.gallery__link(href="assets/images/content/gallery-4@2x.png")
+                        picture.gallery__picture
+                            source.gallery__picture-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/gallery-4@2x.webp 2x, assets/images/content/gallery-4.webp 1x')
+                            source.gallery__picture-source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/gallery-4@2x.png 2x, assets/images/content/gallery-4.png 1x')
+                            img.gallery__picture-image.lazy(data-src='assets/images/content/gallery-4@2x.png' alt="service image")
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery__icon',})
+
+                article.gallery__item
+                    a.gallery__link(href="assets/images/content/gallery-5@2x.png")
+                        picture.gallery__picture
+                            source.gallery__picture-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/gallery-5@2x.webp 2x, assets/images/content/gallery-5.webp 1x')
+                            source.gallery__picture-source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/gallery-5@2x.png 2x, assets/images/content/gallery-5.png 1x')
+                            img.gallery__picture-image.lazy(data-src='assets/images/content/gallery-5@2x.png' alt="service image")
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery__icon',})
+
+                article.gallery__item
+                    a.gallery__link(href="assets/images/content/gallery-6@2x.png")
+                        picture.gallery__picture
+                            source.gallery__picture-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/gallery-6@2x.webp 2x, assets/images/content/gallery-6.webp 1x')
+                            source.gallery__picture-source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/gallery-6@2x.png 2x, assets/images/content/gallery-6.png 1x')
+                            img.gallery__picture-image.lazy(data-src='assets/images/content/gallery-6@2x.png' alt="service image")
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery__icon',})
+
+
+                article.gallery__item
+                    a.gallery__link(href="assets/images/content/gallery-7@2x.png")
+                        picture.gallery__picture
+                            source.gallery__picture-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/gallery-7@2x.webp 2x, assets/images/content/gallery-7.webp 1x')
+                            source.gallery__picture-source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/gallery-7@2x.png 2x, assets/images/content/gallery-7.png 1x')
+                            img.gallery__picture-image.lazy(data-src='assets/images/content/gallery-7@2x.png' alt="service image")
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery__icon',})
+
+                article.gallery__item
+                    a.gallery__link(href="assets/images/content/gallery-8@2x.png")
+                        picture.gallery__picture
+                            source.gallery__picture-source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/content/gallery-8@2x.webp 2x, assets/images/content/gallery-8.webp 1x')
+                            source.gallery__picture-source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/content/gallery-8@2x.png 2x, assets/images/content/gallery-8.png 1x')
+                            img.gallery__picture-image.lazy(data-src='assets/images/content/gallery-8@2x.png' alt="service image")
+
+                        != pugHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery__icon',})

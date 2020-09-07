@@ -1,98 +1,78 @@
 .nav
-    font-family: $o
-    &__list
-        justify-content: flex-start
+    border: 3px solid rgba(0, 0, 0, 0.1)
+    background: #5a8453 url('../images/general/menu-bg.png') 0 0 no-repeat
+    background-size: cover
+    border-radius: 14px
+
+    // &__list
 
     &__item
-        margin-right: 70px
         &:last-child
-            margin-right: 0
-        &.current-item
             .nav__link
-                position: relative
-                padding-bottom: 4px
-                color: $blue
-                &:after
-                    position: absolute
-                    top: 100%
-                    left: 50%
-                    width: 25px
-                    height: 1px
-                    content: ''
-                    background: $blue
-                    transform: translateX(-50%)
+                &::after
+                    border-radius: 0 0 8px 8px
 
-
+    &__item_active
+        .nav__link
+            margin-left: 6px
+            margin-top: 5px
+            margin-right: 6px
+            padding-left: 67px
+            height: 59px
+            background: url('../images/general/menu-active.png') 50% 0 no-repeat
+            background-size: cover
+            color: #221b08
+            font-size: 16px
+            font-weight: 400
+            text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5)
+            box-shadow: 0 20px 50px rgba(41, 23, 8, 0.5)
+            &:after
+                display: none
+            &:hover
+                color: #221b08
+        .nav__icon
+            left: 24px
+            fill: #000
+            opacity: 1
 
     &__link
-        padding-top: 28px
-        display: block
+        position: relative
+        padding-left: 71px
+        height: 50px
+        align-items: center
         color: $white
-        font-size: 14px
         text-decoration: none
-        +tr(.3s ease)
+        text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5)
 
         &:hover
-            color: darken($white , 03)
+            color: #ffcd4e
+            font-size: 16px
+            font-weight: 400
+            text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5)
+            &:after
+                background-color: rgba(69, 92, 65, .6)
+
+            .nav__icon
+                 fill: #ffcd4e
+                 opacity: 1
+
+        &::after
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            content: ''
+            background-color: transparent
             +tr(.3s ease)
 
-.nav_active
-    background: $white
-    width: 100%
-    display: block
-    +mq($medium)
-        display: flex
-        background: transparent
-        width: auto
-    .nav__list
-        padding-right: 15px
-        padding-bottom: 15px
-        padding-left: 15px
-        flex-wrap: wrap
-        display: block
-        +mq($medium)
-            padding-right: 0
-            padding-left: 0
-            display: flex
-            flex-wrap: nowrap
-
-    .nav__item
-        margin-right: 0
-        +mq($medium)
-            margin-right: 70px
-
-        &.current-item
-            .nav__link
-                &:after
-                    left: 15px
-                    +mq($medium)
-                        left: 50%
-
-
-    .nav__link
-        color: $black
-        +mq($medium)
-            color: $white
-
-
-
-
-.nav_secondary
-    .nav__list
-        flex-wrap: wrap
-        +mq($large)
-            flex-wrap: nowrap
-    .nav__item
-        margin-right: 0
-        margin-bottom: 20px
-        max-width: 50%
-        flex-basis: 50%
-        +mq($large)
-            margin-right: 40px
-            margin-bottom: 0px
-            max-width: 100%
-            flex-basis: 100%
-    .nav__link
-        padding-top: 0
-        font-weight: 600
-        white-space: nowrap
+    &__link-text
+        z-index: 1
+        position: relative
+    &__icon
+        z-index: 1
+        position: absolute
+        top: 50%
+        left: 26px
+        opacity: .6
+        transform: translateY(-50%)

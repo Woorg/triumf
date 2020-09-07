@@ -1,78 +1,43 @@
 .footer
-    background-color: #064b5e
-    // &__container
-
-    &__top
-        padding-top: 16px
-        padding-bottom: 16px
+    background-color: #0c4945
+    &__container
+        position: relative
+        padding-top: 61px
         align-items: center
-        flex-wrap: wrap
-        +mq($large)
-            flex-wrap: nowrap
+        &::after
+            position: absolute
+            top: 0
+            left: 0
+            width: 1200px
+            height: 57px
+            content: ''
+            background: url('../images/general/line.png') 50% 0 no-repeat
+            background-size: cover
+
+
     &__logo
-        order: 0
-        +mq($large)
-            order: 0
+        margin-right: 55px
 
-    &__nav
-        margin-top: 33px
-        order: 3
-        width: 100%
-        +mq($large)
-            margin-top: 0
-            margin-left: 70px
-            width: auto
-            order: 2
+    // &__contact
 
+    &__contact_address
+        margin-right: 43px
+    &__contact_booking
+        margin-right: 47px
 
+    &__contact_phone
+        margin-right: 45px
 
-    &__contacts
-        // max-width: 100px
+    &__button
         margin-left: auto
-        order: 1
-        text-align: right
-        +mq($large)
-            order: 2
-
-    &__phone
-        color: $white
-
-    &__email
-        margin-top: 10px
-        display: block
-        color: $white
-        font-size: 14px
-        font-weight: bold
-        text-decoration: none
-        +tr(.3s ease)
-        &:hover
-            color: darken($white, 03)
-            +tr(.3s ease)
 
     &__bottom
-        border-top: solid 1px #2f7589
-        padding-top: 11px
-        padding-bottom: 11px
-        font-size: 12px
-
+        border-top: 1px solid rgba(255, 255, 255, 0.07)
+        padding-top: 8px
+        padding-bottom: 8px
+        text-align: center
     &__copyright
-        color: $white
-        line-height: 1.4
-        +mq($large)
-            line-height: 1
-
-    &__created
-        margin-left: auto
-        color: $white
-        line-height: 1.4
-        text-align: right
-        +mq($large)
-            line-height: 1
-
-    &__created-link
-        margin-left: 5px
-        color: $white
-        &:hover
-            text-decoration: none
-
-
+        color: rgba(255,255,255,.55)
+        font-size: 14px
+        font-weight: 400
+        line-height: 1.428

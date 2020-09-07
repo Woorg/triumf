@@ -1,0 +1,55 @@
+.text
+    &__container
+        padding-top: 75px
+        padding-bottom: 75px
+    &__w
+        padding-top: 44px
+        padding-right: 60px
+        padding-bottom: 44px
+        padding-left: 60px
+        // height: 494px
+        background-color: #ffffff
+        color: $white
+        border-radius: 5px
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1)
+
+
+    &__text
+        max-height: 300px
+        overflow: hidden
+        +tr(max-height .3s ease)
+
+    &__text_active
+        max-height: 9999px
+        +tr(max-height .3s ease)
+
+
+
+
+    &__more
+        +resetbutton()
+        margin-top: 30px
+        max-width: 100%
+        width: 100%
+        height: 60px
+        justify-content: center
+        align-items: center
+        background-color: #e8f5e5
+        color: #63bc55
+        font-size: 16px
+        font-weight: 700
+        border-radius: 5px
+        +tr(.3s ease)
+
+        &:hover
+            background-color: darken(#e8f5e5, 10)
+            +tr(.3s ease)
+
+    &__more_active
+        .text__more-icon
+            transform: rotate(180deg)
+            +tr(.3s ease)
+
+    &__more-icon
+        margin-left: 13px
+        +tr(.3s ease)

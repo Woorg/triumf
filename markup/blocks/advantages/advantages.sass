@@ -1,58 +1,42 @@
 .advantages
+    overflow: hidden
     &__container
-        padding-top: 30px
-        padding-bottom: 0
-        +mq($medium)
-            padding-top: 54px
-            padding-bottom: 27px
+        padding-top: (96px / 2)
+        padding-bottom: (46px / 2)
 
-    &__title
-        margin-bottom: 36px
-        text-align: center
         +mq($medium)
-            margin-bottom: 60px
+            padding-top: 96px
+            padding-bottom: 46px
+    &__title
+        margin-bottom: 47px
+        text-align: center
 
     &__list
-        flex-wrap: wrap
         justify-content: center
+        flex-wrap: wrap
         +mq($medium)
-            flex-wrap: nowrap
+            margin-left: -14px
+            margin-right: -14px
+
     &__item
-        margin-bottom: 30px
-        max-width: 50%
-        flex-basis: 50%
+        margin-bottom: 28px
+        max-width: 100%
+        width: 100%
+        height: 71px
+        justify-content: center
+        align-items: center
         +mq($medium)
-            margin-bottom: 0
-            max-width: 25%
-            flex-basis: 25%
+            padding-left: 14px
+            padding-right: 14px
+            max-width: 50%
 
-    &__top
-        height: 120px
-
-    &__icon
-        margin-right: auto
-        margin-left: auto
-        display: block
-        color: $blue
-
-    &__item-title
-        position: relative
-        // margin-top: 19px
-        padding-bottom: 16px
-        font-family: $p
-        font-size: 20px
-        font-weight: 500
-        line-height: 1.2
+    &__item-text
+        border: 2px solid #ffffff
+        height: 100%
+        justify-content: center
+        align-items: center
+        color: $white
+        font-size: 18px
         text-align: center
-        +mq($medium)
-            padding-bottom: 20px
-
-        &::after
-            position: absolute
-            top: 100%
-            left: 50%
-            content: ''
-            width: 30px
-            height: 2px
-            background:#399dde
-            transform: translateX(-50%)
+        font-weight: 600
+        border-radius: 5px
